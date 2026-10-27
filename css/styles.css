@@ -52,3 +52,13 @@
         max-width: 100%;
     }
 }
+/* Hito 1.2.2 - Ajuste final de composición */
+@media (min-width: 1101px) {
+    .hero-image {
+        background-position: 68% 44%;
+    }
+
+    .hero-content {
+        max-width: 640px;
+    }
+}
