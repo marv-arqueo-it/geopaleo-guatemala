@@ -91,3 +91,70 @@
 .quicklinks small {
     font-size: 13px;
 }
+
+
+/* Hito 1.2.4 - Portada con paisaje visible */
+
+.hero {
+    min-height: 570px;
+    background: #102131;
+}
+
+/* Mostrar más paisaje y volcanes */
+.hero-image {
+    background-image: url('../assets/mastodonte-portada.webp');
+    background-size: cover;
+    background-position: center 48%;
+    transform: none;
+}
+
+/* Oscurecer solo el área del texto */
+.hero::before {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 17, 24, 0.90) 0%,
+            rgba(5, 17, 24, 0.72) 23%,
+            rgba(5, 17, 24, 0.38) 43%,
+            rgba(5, 17, 24, 0.08) 68%,
+            rgba(5, 17, 24, 0.00) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(5, 17, 24, 0.45) 0%,
+            transparent 30%
+        );
+}
+
+/* Título similar a la referencia */
+.hero-content {
+    max-width: 690px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 4vw, 62px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+/* Texto legible sin oscurecer el paisaje */
+.hero p {
+    max-width: 580px;
+    color: #f4f4f2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Adaptación móvil */
+@media (max-width: 650px) {
+    .hero-image {
+        background-position: 62% center;
+    }
+
+    .hero::before {
+        background: linear-gradient(
+            90deg,
+            rgba(5, 17, 24, 0.90),
+            rgba(5, 17, 24, 0.45)
+        );
+    }
+}
