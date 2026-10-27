@@ -52,13 +52,42 @@
         max-width: 100%;
     }
 }
-/* Hito 1.2.2 - Ajuste final de composición */
-@media (min-width: 1101px) {
-    .hero-image {
-        background-position: 68% 44%;
-    }
 
-    .hero-content {
-        max-width: 640px;
-    }
+/* Hito 1.2.3 - Refinamiento del atlas */
+
+.panel {
+    padding: 22px;
+}
+
+.panel h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.panel .note {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.results button {
+    padding: 14px;
+    transition: background .2s, border-color .2s;
+}
+
+.results button:hover {
+    background: #edf4f1;
+    border-color: #b8c9c0;
+}
+
+.quicklinks a {
+    min-height: 135px;
+    justify-content: center;
+}
+
+.quicklinks strong {
+    font-size: 16px;
+}
+
+.quicklinks small {
+    font-size: 13px;
 }
