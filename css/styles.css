@@ -1,39 +1,22 @@
 :root{--navy:#122334;--ink:#1d2936;--gold:#e4b665;--muted:#647484;--bg:#f4f7f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg)}a{color:inherit;text-decoration:none}.top{background:#122334;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px clamp(20px,5vw,80px);flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px}.brand strong{font-size:23px}.brand em{font-style:normal;font-weight:400}.brand small{display:block;font-size:11px;color:#c4d0d9}.logo{color:var(--gold);font-size:40px}.top nav{display:flex;gap:24px;flex-wrap:wrap;font-size:14px}.top nav a:hover{color:var(--gold)}.hero{min-height:380px;background:radial-gradient(ellipse at 75% 55%,#536f5a 0,transparent 42%),linear-gradient(120deg,#102c32,#365344 65%,#24352e);color:white;display:flex;align-items:center;justify-content:space-between;overflow:hidden;padding:45px clamp(20px,7vw,110px)}.hero-content{max-width:660px;position:relative;z-index:1}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:800;color:#efc57b}.eyebrow.dark{color:#9a6b2b}.hero h1{font-size:clamp(35px,4.5vw,62px);line-height:1.09;letter-spacing:-1.8px;margin:16px 0}.hero p{font-size:19px;max-width:550px;color:#e1e9e5}.hero-art{font-size:clamp(100px,17vw,250px);filter:drop-shadow(12px 20px 20px #152b24);opacity:.88}.cta{display:inline-block;margin-top:18px;background:var(--gold);color:#192a2b;padding:12px 24px;border-radius:7px;font-weight:750}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:18px}.section-heading p{margin-top:0;color:var(--muted)}h2{font-size:clamp(26px,3vw,38px);line-height:1.2;margin:8px 0 12px}h3{margin:0 0 15px;font-size:17px}.explore,.collections{padding:42px clamp(18px,4vw,70px)}.demo{font-size:11px;letter-spacing:1px;font-weight:800;background:#f8e9c9;color:#795a1e;padding:8px 12px;border-radius:4px;white-space:nowrap}.map-layout{display:grid;grid-template-columns:235px minmax(0,1fr) 255px;gap:12px;height:560px}.panel{background:white;border:1px solid #dfe5e7;border-radius:8px;padding:20px;overflow:auto}.panel label{display:block;margin:12px 0;font-size:14px}.panel input[type=text],#search{width:100%;border:1px solid #ccd5d8;padding:10px;border-radius:5px}.panel hr{border:0;border-top:1px solid #e2e7e8;margin:23px 0}.note{font-size:12px;color:var(--muted);line-height:1.6}.legend{font-size:13px;margin-top:20px}.dot{display:inline-block;width:12px;height:12px;background:#d58b35;border-radius:50%;margin-right:6px}.results button{display:block;text-align:left;background:#f6f8f8;border:1px solid #e1e7e8;width:100%;border-radius:7px;margin:10px 0;padding:12px;cursor:pointer;color:var(--ink)}.results button:hover{border-color:#a2b4ac}.results small{display:block;color:var(--muted)}#map{border-radius:8px;z-index:0;min-height:320px}.collections{text-align:center}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px;text-align:left}.cards article{background:#fff;border:1px solid #e1e7e8;padding:24px;border-radius:9px}.cards p{color:var(--muted);font-size:14px}.cardicon{font-size:35px}.participate{background:#203b3b;color:white;padding:55px clamp(20px,7vw,110px);display:flex;justify-content:space-between;align-items:center;gap:30px}.participate>div{max-width:740px}.participate p{color:#d5e0df}.cta.light{background:#fff;white-space:nowrap}footer{text-align:center;background:#122334;color:#c4d0d9;font-size:12px;padding:20px}@media(max-width:1100px){.map-layout{grid-template-columns:205px 1fr;height:auto}.map-layout #map{height:520px}.results{grid-column:1/-1}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.hero-art{display:none}.map-layout{display:flex;flex-direction:column}.map-layout #map{height:430px;flex:none}.cards{grid-template-columns:1fr}.participate{display:block}.section-heading{display:block}.demo{display:inline-block;margin:10px 0}.top nav{gap:12px}}
 
-/* GeoPaleo - Corrección del mapa Leaflet */
-
-.map-layout {
-    min-width: 0;
-}
-
-#map {
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    z-index: 0;
-}
-
-.leaflet-container {
-    overflow: hidden;
-}
-
-.leaflet-container img {
-    max-width: none !important;
-    max-height: none !important;
-}
-
-@media (max-width: 1100px) {
-    .map-layout #map {
-        height: 520px;
-    }
-}
-
-@media (max-width: 650px) {
-    .map-layout #map {
-        height: 430px;
-        flex: none;
-    }
-}
+/* HITO 1.1 — Identidad visual GeoPaleo */
+.top{position:relative;z-index:30;background:#101e2c;box-shadow:0 4px 22px #101e2c24}
+.logo{display:grid;place-items:center;width:50px;height:50px;background:#d6a45e20;border:1px solid #d6a45e55;border-radius:14px;font-size:28px}
+.top nav a{padding:9px 12px;border-radius:7px;transition:background .2s}
+.top nav a:hover{background:#ffffff13}
+.hero{position:relative;isolation:isolate;min-height:550px;padding:82px clamp(20px,7vw,110px);background:linear-gradient(100deg,#101f2d 0%,#182e32 60%,#334e3f 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0d1d2cf5 0%,#0d1d2cd9 39%,#0d1d2c26 85%)}
+.hero-scene{position:absolute;inset:0;z-index:-2;overflow:hidden;background:radial-gradient(ellipse at 76% 20%,#c4b6818c,transparent 38%),linear-gradient(180deg,#506b67 0%,#7b8c70 45%,#3e5949 80%,#263d32 100%)}
+.scene-sun{position:absolute;right:16%;top:15%;width:190px;height:190px;border-radius:50%;background:#f3d29a88;filter:blur(18px)}
+.scene-mountain{position:absolute;bottom:0;width:80%;height:75%;clip-path:polygon(0 100%,35% 25%,45% 43%,62% 5%,100% 100%);background:#203d3d}
+.mountain-one{right:-10%;bottom:7%;opacity:.55;background:#b4a77b}.mountain-two{right:-24%;bottom:-12%;background:#345c50}.mountain-three{right:25%;bottom:-28%;background:#213e39}
+.scene-animal{position:absolute;right:9%;bottom:3%;font-size:clamp(170px,24vw,380px);line-height:1;filter:drop-shadow(18px 18px 8px #142b2b70)}
+.hero-content{max-width:720px}.hero h1{font-size:clamp(42px,5vw,76px);line-height:1.07;letter-spacing:-2px}.hero h1 span{color:#e8be77}.hero p{font-size:clamp(17px,1.6vw,21px);line-height:1.65;max-width:590px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.cta{transition:transform .2s,background .2s}.cta:hover{transform:translateY(-2px)}.cta.ghost{background:#ffffff16;color:white;border:1px solid #ffffff80}.hero-values{display:flex;gap:24px;flex-wrap:wrap;margin-top:34px;font-size:13px;color:#e8e7da;font-weight:650}.hero-disclaimer{position:absolute;bottom:15px;right:22px;color:#fff9;font-size:10px;letter-spacing:1px}
+.mission{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:60px clamp(18px,4vw,70px);background:#fff}.mission p{color:var(--muted);max-width:760px}.mission-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mission-stats div{background:#f4f7f6;border:1px solid #e3eae7;border-radius:10px;padding:20px 12px;text-align:center}.mission-stats strong{display:block;color:#a16e31;font-size:34px}.mission-stats span{font-size:12px;color:#566876}
+/* Leaflet: mantener CSS del proveedor antes de estos estilos */
+#map{width:100%;min-width:0;height:100%;position:relative;overflow:hidden;border-radius:8px;z-index:0}
+.leaflet-container img{max-width:none!important;max-height:none!important}
+@media(max-width:1100px){.map-layout #map{height:520px}.mission{grid-template-columns:1fr}}
+@media(max-width:650px){.hero{min-height:590px;padding-top:70px;padding-bottom:90px}.hero-scene{opacity:.75}.scene-animal{right:-8%;bottom:5%;font-size:200px;opacity:.6}.hero::before{background:linear-gradient(90deg,#0d1d2cf0,#0d1d2ca8)}.hero h1{letter-spacing:-1px}.hero-values{gap:12px}.hero-disclaimer{left:20px;right:auto}.map-layout #map{height:430px}.mission-stats{grid-template-columns:1fr 1fr 1fr}.mission-stats div{padding:14px 6px}.mission-stats strong{font-size:26px}}
