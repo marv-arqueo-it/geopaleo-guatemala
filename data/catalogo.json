@@ -1,0 +1,31 @@
+[
+  {
+    "id": "GP-DEMO-001",
+    "tipoRegistro": "hallazgo",
+    "titulo": "Registro paleontológico demostrativo",
+    "descripcion": "Ficha de prueba para validar el catálogo.",
+    "estadoVerificacion": "demostrativo",
+    "clasificacion": {
+      "grupo": "Proboscidea",
+      "taxon": null,
+      "periodoGeologico": "Pleistoceno",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": null,
+      "municipio": null,
+      "descripcionGeneral": "Ubicación no documentada",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible"
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": []
+    },
+    "control": {
+      "institucionFuente": null,
+      "responsableRevision": null,
+      "fechaActualizacion": null
+    }
+  }
+]
