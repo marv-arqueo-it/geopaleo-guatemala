@@ -88,6 +88,34 @@ document.addEventListener("DOMContentLoaded", async () => {
       registro.ubicacion?.descripcionGeneral
     );
 
+    seccion(detalle, "Galería y créditos");
+    const imagenes = Array.isArray(registro.documentacion?.imagenes)
+      ? registro.documentacion.imagenes : [];
+    if (!imagenes.length) {
+      detalle.appendChild(elemento("p", "No hay fotografías documentadas para este registro."));
+    } else {
+      const galeria = elemento("div", "", "ficha-galeria");
+      imagenes.forEach(imagen => {
+        if (!imagen || typeof imagen !== "object") return;
+        // Solo archivos locales del proyecto; no cargar URLs arbitrarias.
+        const ruta = imagen.archivo;
+        if (typeof ruta !== "string" || !/^assets\/[a-zA-Z0-9/_-]+\.(webp|png|jpg|jpeg)$/i.test(ruta) || ruta.includes("..")) return;
+        const figura = document.createElement("figure");
+        const foto = document.createElement("img");
+        foto.src = ruta;
+        foto.alt = mostrar(imagen.descripcion);
+        foto.loading = "lazy";
+        const pie = document.createElement("figcaption");
+        pie.textContent = [imagen.descripcion, imagen.autor && `Autor: ${imagen.autor}`,
+          imagen.licencia && `Licencia: ${imagen.licencia}`,
+          imagen.fuente && `Fuente: ${imagen.fuente}`].filter(Boolean).join(" · ");
+        figura.append(foto, pie);
+        galeria.appendChild(figura);
+      });
+      detalle.appendChild(galeria.childElementCount ? galeria :
+        elemento("p", "No hay imágenes locales válidas."));
+    }
+
     seccion(detalle, "Documentación científica");
 
     const referencias = Array.isArray(registro.documentacion?.referencias)
@@ -95,17 +123,31 @@ document.addEventListener("DOMContentLoaded", async () => {
       : [];
 
     if (referencias.length === 0) {
-      detalle.appendChild(elemento(
-        "p",
-        "Todavía no se han incorporado referencias científicas."
-      ));
+      detalle.appendChild(elemento("p", "Todavía no se han incorporado referencias científicas."));
     } else {
-      const lista = document.createElement("ul");
+      const lista = elemento("ul", "", "ficha-referencias");
       referencias.forEach(ref => {
-        const texto = typeof ref === "string"
-          ? ref
-          : ref?.titulo || ref?.cita || "Referencia sin título";
-        lista.appendChild(elemento("li", texto));
+        const item = document.createElement("li");
+        const titulo = typeof ref === "string" ? ref : (ref?.titulo || ref?.cita || "Referencia sin título");
+        item.appendChild(elemento("strong", titulo));
+        if (typeof ref === "object" && ref) {
+          if (ref.autores || ref.anio) item.appendChild(elemento("p",
+            [ref.autores, ref.anio].filter(Boolean).join(" · ")));
+          if (ref.doi) item.appendChild(elemento("p", `DOI: ${ref.doi}`));
+          if (typeof ref.url === "string") {
+            try {
+              const url = new URL(ref.url);
+              if (url.protocol === "https:") {
+                const enlace = elemento("a", "Consultar publicación ↗");
+                enlace.href = url.href;
+                enlace.target = "_blank";
+                enlace.rel = "noopener noreferrer";
+                item.appendChild(enlace);
+              }
+            } catch (_) { /* URL no válida: no se publica el enlace */ }
+          }
+        }
+        lista.appendChild(item);
       });
       detalle.appendChild(lista);
     }
