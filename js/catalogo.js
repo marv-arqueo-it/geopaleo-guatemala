@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     detalle.appendChild(estado);
 
+    if (registro.estadoVerificacion === "referencia_historica") {
+      detalle.appendChild(elemento("p", "Referencia histórica documentada en una fuente secundaria. La identificación y ubicación requieren corroboración; no representa un hallazgo verificado.", "ficha-aviso"));
+    }
+
     if (registro.estadoVerificacion === "demostrativo") {
       detalle.appendChild(elemento(
         "p",
@@ -64,6 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     seccion(detalle, "Identificación");
     campo(detalle, "Código", registro.id);
     campo(detalle, "Tipo de registro", registro.tipoRegistro);
+    if (registro.control?.fechaReferenciaHistorica) campo(detalle, "Fecha de referencia histórica", registro.control.fechaReferenciaHistorica);
 
     seccion(detalle, "Clasificación paleontológica");
     campo(detalle, "Grupo", registro.clasificacion?.grupo);
