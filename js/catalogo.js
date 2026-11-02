@@ -1,121 +1,222 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
   const contenedor = document.querySelector("#catalogo-registros");
+  const modal = document.querySelector("#catalogo-modal");
   const detalle = document.querySelector("#catalogo-detalle");
+  const tituloModal = document.querySelector("#catalogo-modal-titulo");
+  const cerrar = document.querySelector("#catalogo-cerrar");
 
-  if (!contenedor || !detalle) return;
+  if (!contenedor || !modal || !detalle || !tituloModal || !cerrar) {
+    console.error("Faltan elementos del catálogo.");
+    return;
+  }
 
   const mostrar = valor =>
     valor === null || valor === undefined || valor === ""
       ? "No documentado"
       : String(valor);
 
-  function agregarCampo(padre, etiqueta, valor) {
-    const fila = document.createElement("p");
-    const titulo = document.createElement("strong");
-    titulo.textContent = `${etiqueta}: `;
-    fila.append(titulo, document.createTextNode(mostrar(valor)));
+  function elemento(etiqueta, texto, clase = "") {
+    const nodo = document.createElement(etiqueta);
+    nodo.textContent = texto;
+    if (clase) nodo.className = clase;
+    return nodo;
+  }
+
+  function campo(padre, etiqueta, valor) {
+    const fila = elemento("p", "", "ficha-campo");
+    const nombre = elemento("strong", `${etiqueta}: `);
+    fila.append(nombre, document.createTextNode(mostrar(valor)));
     padre.appendChild(fila);
   }
 
-  function mostrarFicha(registro) {
+  function seccion(padre, titulo) {
+    padre.appendChild(elemento("h3", titulo, "ficha-subtitulo"));
+  }
+
+  function abrirFicha(registro) {
     detalle.replaceChildren();
 
-    const encabezado = document.createElement("h3");
-    encabezado.textContent = registro.titulo;
+    tituloModal.textContent = mostrar(registro.titulo);
 
-    const estado = document.createElement("p");
-    estado.className = "catalogo-estado";
-    estado.textContent =
-      `Estado: ${mostrar(registro.estadoVerificacion)}`;
+    const estado = elemento(
+      "span",
+      mostrar(registro.estadoVerificacion),
+      "catalogo-etiqueta"
+    );
 
-    const aviso = document.createElement("p");
-    aviso.textContent =
-      "Este registro es demostrativo y no representa un hallazgo verificado.";
-
-    detalle.append(encabezado, estado);
+    detalle.appendChild(estado);
 
     if (registro.estadoVerificacion === "demostrativo") {
-      detalle.appendChild(aviso);
+      detalle.appendChild(elemento(
+        "p",
+        "Este registro es demostrativo. No representa un hallazgo verificado.",
+        "ficha-aviso"
+      ));
     }
 
-    agregarCampo(detalle, "Código", registro.id);
-    agregarCampo(detalle, "Tipo", registro.tipoRegistro);
-    agregarCampo(detalle, "Descripción", registro.descripcion);
+    detalle.appendChild(elemento(
+      "p",
+      mostrar(registro.descripcion),
+      "ficha-descripcion"
+    ));
 
-    const clasificacion = document.createElement("h4");
-    clasificacion.textContent = "Clasificación paleontológica";
-    detalle.appendChild(clasificacion);
+    seccion(detalle, "Identificación");
+    campo(detalle, "Código", registro.id);
+    campo(detalle, "Tipo de registro", registro.tipoRegistro);
 
-    agregarCampo(detalle, "Grupo", registro.clasificacion?.grupo);
-    agregarCampo(detalle, "Taxón", registro.clasificacion?.taxon);
-    agregarCampo(
+    seccion(detalle, "Clasificación paleontológica");
+    campo(detalle, "Grupo", registro.clasificacion?.grupo);
+    campo(detalle, "Taxón", registro.clasificacion?.taxon);
+    campo(
       detalle,
       "Período geológico",
       registro.clasificacion?.periodoGeologico
     );
-
-    const ubicacion = document.createElement("h4");
-    ubicacion.textContent = "Ubicación";
-    detalle.appendChild(ubicacion);
-
-    agregarCampo(
+    campo(
       detalle,
-      "Departamento",
-      registro.ubicacion?.departamento
+      "Antigüedad estimada",
+      registro.clasificacion?.antiguedadEstimada
     );
-    agregarCampo(
+
+    seccion(detalle, "Ubicación general");
+    campo(detalle, "Departamento", registro.ubicacion?.departamento);
+    campo(detalle, "Municipio", registro.ubicacion?.municipio);
+    campo(
       detalle,
-      "Municipio",
-      registro.ubicacion?.municipio
-    );
-    agregarCampo(
-      detalle,
-      "Referencia general",
+      "Referencia",
       registro.ubicacion?.descripcionGeneral
     );
 
-    const fuentes = document.createElement("h4");
-    fuentes.textContent = "Documentación científica";
-    detalle.appendChild(fuentes);
+    seccion(detalle, "Documentación científica");
 
-    const referencias = registro.documentacion?.referencias ?? [];
-    agregarCampo(
+    const referencias = Array.isArray(registro.documentacion?.referencias)
+      ? registro.documentacion.referencias
+      : [];
+
+    if (referencias.length === 0) {
+      detalle.appendChild(elemento(
+        "p",
+        "Todavía no se han incorporado referencias científicas."
+      ));
+    } else {
+      const lista = document.createElement("ul");
+      referencias.forEach(ref => {
+        const texto = typeof ref === "string"
+          ? ref
+          : ref?.titulo || ref?.cita || "Referencia sin título";
+        lista.appendChild(elemento("li", texto));
+      });
+      detalle.appendChild(lista);
+    }
+
+    seccion(detalle, "Control del registro");
+    campo(
       detalle,
-      "Referencias disponibles",
-      referencias.length
+      "Institución fuente",
+      registro.control?.institucionFuente
     );
+    campo(
+      detalle,
+      "Responsable de revisión",
+      registro.control?.responsableRevision
+    );
+    campo(
+      detalle,
+      "Última actualización",
+      registro.control?.fechaActualizacion
+    );
+
+    modal.showModal();
   }
+
+  function crearTarjeta(registro) {
+    const tarjeta = document.createElement("button");
+    tarjeta.type = "button";
+    tarjeta.className = "catalogo-tarjeta";
+
+    const cabecera = elemento("div", "", "catalogo-tarjeta-top");
+    const icono = elemento("span", "◈", "catalogo-icono");
+    icono.setAttribute("aria-hidden", "true");
+
+    const estado = elemento(
+      "span",
+      mostrar(registro.estadoVerificacion),
+      "catalogo-etiqueta"
+    );
+
+    cabecera.append(icono, estado);
+
+    const titulo = elemento(
+      "h3",
+      mostrar(registro.titulo),
+      "catalogo-tarjeta-titulo"
+    );
+
+    const descripcion = elemento(
+      "p",
+      mostrar(registro.descripcion),
+      "catalogo-tarjeta-descripcion"
+    );
+
+    const grupo = mostrar(registro.clasificacion?.grupo);
+    const periodo = mostrar(registro.clasificacion?.periodoGeologico);
+
+    const datos = elemento(
+      "p",
+      `${grupo} · ${periodo}`,
+      "catalogo-tarjeta-datos"
+    );
+
+    const pie = elemento("div", "", "catalogo-tarjeta-pie");
+    pie.append(
+      elemento("small", mostrar(registro.id)),
+      elemento("span", "Ver ficha ↗")
+    );
+
+    tarjeta.append(cabecera, titulo, descripcion, datos, pie);
+
+    tarjeta.addEventListener("click", () => abrirFicha(registro));
+    return tarjeta;
+  }
+
+  cerrar.addEventListener("click", () => modal.close());
+
+  modal.addEventListener("click", evento => {
+    if (evento.target === modal) modal.close();
+  });
 
   try {
     const respuesta = await fetch("data/catalogo.json");
-    if (!respuesta.ok) throw new Error("Error al cargar el catálogo");
+
+    if (!respuesta.ok) {
+      throw new Error("No se pudo cargar el catálogo.");
+    }
 
     const registros = await respuesta.json();
+
     if (!Array.isArray(registros)) {
-      throw new Error("El catálogo debe ser un arreglo JSON");
+      throw new Error("El catálogo no contiene un arreglo JSON.");
     }
 
     contenedor.replaceChildren();
 
     if (registros.length === 0) {
-      contenedor.textContent = "No hay registros disponibles.";
+      contenedor.appendChild(
+        elemento("p", "No hay registros disponibles.")
+      );
       return;
     }
 
     registros.forEach(registro => {
-      const boton = document.createElement("button");
-      boton.type = "button";
-      boton.className = "catalogo-item";
-      boton.textContent = registro.titulo;
-      boton.addEventListener("click", () => mostrarFicha(registro));
-      contenedor.appendChild(boton);
+      contenedor.appendChild(crearTarjeta(registro));
     });
 
-    mostrarFicha(registros[0]);
   } catch (error) {
-    console.error(error);
-    contenedor.textContent =
-      "No fue posible cargar el catálogo paleontológico.";
+    console.error("Error del catálogo:", error);
+    contenedor.replaceChildren();
+    contenedor.appendChild(
+      elemento("p", "No fue posible cargar el catálogo.")
+    );
   }
 });
