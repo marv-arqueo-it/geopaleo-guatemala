@@ -303,3 +303,10 @@
 @media(max-width:1150px){.catalogo-filtros{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.catalogo-filtros{grid-template-columns:1fr 1fr}.catalogo-filtros label:first-child{grid-column:1/-1}}
 @media(max-width:390px){.catalogo-filtros{grid-template-columns:1fr}.catalogo-filtros label:first-child{grid-column:auto}}
+
+/* Ajuste de filtros: seis criterios y texto de ayuda */
+.catalogo-filtros{grid-template-columns:1.5fr repeat(5,minmax(115px,1fr)) auto}
+.catalogo-ayuda{margin:12px 0 0;color:#647484;font-size:12px}
+@media(max-width:1300px){.catalogo-filtros{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.catalogo-filtros{grid-template-columns:1fr 1fr}.catalogo-filtros label:first-child{grid-column:1/-1}}
+@media(max-width:390px){.catalogo-filtros{grid-template-columns:1fr}.catalogo-filtros label:first-child{grid-column:auto}}
