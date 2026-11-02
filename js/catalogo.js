@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     detalle.appendChild(estado);
 
+    if (registro.estadoVerificacion === "referencia_historica") {
+      detalle.appendChild(elemento("p", "Referencia histórica documentada en una fuente secundaria. La identificación y ubicación requieren corroboración; no representa un hallazgo verificado.", "ficha-aviso"));
+    }
+
     if (registro.estadoVerificacion === "demostrativo") {
       detalle.appendChild(elemento(
         "p",
@@ -64,6 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     seccion(detalle, "Identificación");
     campo(detalle, "Código", registro.id);
     campo(detalle, "Tipo de registro", registro.tipoRegistro);
+    if (registro.control?.fechaReferenciaHistorica) campo(detalle, "Fecha de referencia histórica", registro.control.fechaReferenciaHistorica);
 
     seccion(detalle, "Clasificación paleontológica");
     campo(detalle, "Grupo", registro.clasificacion?.grupo);
@@ -88,6 +93,34 @@ document.addEventListener("DOMContentLoaded", async () => {
       registro.ubicacion?.descripcionGeneral
     );
 
+    seccion(detalle, "Galería y créditos");
+    const imagenes = Array.isArray(registro.documentacion?.imagenes)
+      ? registro.documentacion.imagenes : [];
+    if (!imagenes.length) {
+      detalle.appendChild(elemento("p", "No hay fotografías documentadas para este registro."));
+    } else {
+      const galeria = elemento("div", "", "ficha-galeria");
+      imagenes.forEach(imagen => {
+        if (!imagen || typeof imagen !== "object") return;
+        // Solo archivos locales del proyecto; no cargar URLs arbitrarias.
+        const ruta = imagen.archivo;
+        if (typeof ruta !== "string" || !/^assets\/[a-zA-Z0-9/_-]+\.(webp|png|jpg|jpeg)$/i.test(ruta) || ruta.includes("..")) return;
+        const figura = document.createElement("figure");
+        const foto = document.createElement("img");
+        foto.src = ruta;
+        foto.alt = mostrar(imagen.descripcion);
+        foto.loading = "lazy";
+        const pie = document.createElement("figcaption");
+        pie.textContent = [imagen.descripcion, imagen.autor && `Autor: ${imagen.autor}`,
+          imagen.licencia && `Licencia: ${imagen.licencia}`,
+          imagen.fuente && `Fuente: ${imagen.fuente}`].filter(Boolean).join(" · ");
+        figura.append(foto, pie);
+        galeria.appendChild(figura);
+      });
+      detalle.appendChild(galeria.childElementCount ? galeria :
+        elemento("p", "No hay imágenes locales válidas."));
+    }
+
     seccion(detalle, "Documentación científica");
 
     const referencias = Array.isArray(registro.documentacion?.referencias)
@@ -95,17 +128,31 @@ document.addEventListener("DOMContentLoaded", async () => {
       : [];
 
     if (referencias.length === 0) {
-      detalle.appendChild(elemento(
-        "p",
-        "Todavía no se han incorporado referencias científicas."
-      ));
+      detalle.appendChild(elemento("p", "Todavía no se han incorporado referencias científicas."));
     } else {
-      const lista = document.createElement("ul");
+      const lista = elemento("ul", "", "ficha-referencias");
       referencias.forEach(ref => {
-        const texto = typeof ref === "string"
-          ? ref
-          : ref?.titulo || ref?.cita || "Referencia sin título";
-        lista.appendChild(elemento("li", texto));
+        const item = document.createElement("li");
+        const titulo = typeof ref === "string" ? ref : (ref?.titulo || ref?.cita || "Referencia sin título");
+        item.appendChild(elemento("strong", titulo));
+        if (typeof ref === "object" && ref) {
+          if (ref.autores || ref.anio) item.appendChild(elemento("p",
+            [ref.autores, ref.anio].filter(Boolean).join(" · ")));
+          if (ref.doi) item.appendChild(elemento("p", `DOI: ${ref.doi}`));
+          if (typeof ref.url === "string") {
+            try {
+              const url = new URL(ref.url);
+              if (url.protocol === "https:") {
+                const enlace = elemento("a", "Consultar publicación ↗");
+                enlace.href = url.href;
+                enlace.target = "_blank";
+                enlace.rel = "noopener noreferrer";
+                item.appendChild(enlace);
+              }
+            } catch (_) { /* URL no válida: no se publica el enlace */ }
+          }
+        }
+        lista.appendChild(item);
       });
       detalle.appendChild(lista);
     }
@@ -208,9 +255,82 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    registros.forEach(registro => {
-      contenedor.appendChild(crearTarjeta(registro));
+    const filtros = {
+      texto: document.querySelector("#filtro-texto"),
+      departamento: document.querySelector("#filtro-departamento"),
+      municipio: document.querySelector("#filtro-municipio"),
+      periodo: document.querySelector("#filtro-periodo"),
+      grupo: document.querySelector("#filtro-grupo"),
+      estado: document.querySelector("#filtro-estado")
+    };
+    const contador = document.querySelector("#catalogo-contador");
+    const limpiar = document.querySelector("#filtro-limpiar");
+    const nombreEstado = {
+      demostrativo: "Demostrativo",
+      referencia_historica: "Referencia histórica",
+      verificado: "Verificado",
+      pendiente: "Pendiente de verificación"
+    };
+    function opciones(select, valores, etiquetas = {}) {
+      if (!select) return;
+      [...new Set(valores.filter(v => typeof v === "string" && v.trim()))]
+        .sort((a, b) => a.localeCompare(b, "es"))
+        .forEach(valor => {
+          const option = document.createElement("option");
+          option.value = valor;
+          option.textContent = etiquetas[valor] || valor;
+          select.appendChild(option);
+        });
+    }
+    opciones(filtros.departamento, registros.map(r => r.ubicacion?.departamento));
+    opciones(filtros.municipio, registros.map(r => r.ubicacion?.municipio));
+    opciones(filtros.periodo, registros.map(r => r.clasificacion?.periodoGeologico));
+    opciones(filtros.grupo, registros.map(r => r.clasificacion?.grupo));
+    opciones(filtros.estado, registros.map(r => r.estadoVerificacion), nombreEstado);
+    function normalizar(valor) {
+      return String(valor ?? "").normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
+    }
+    function actualizarMunicipios() {
+      if (!filtros.municipio) return;
+      const anterior = filtros.municipio.value;
+      const disponibles = registros.filter(r => !filtros.departamento?.value || r.ubicacion?.departamento === filtros.departamento.value).map(r => r.ubicacion?.municipio);
+      filtros.municipio.replaceChildren(new Option("Todos", ""));
+      opciones(filtros.municipio, disponibles);
+      filtros.municipio.value = disponibles.includes(anterior) ? anterior : "";
+    }
+    function renderizar() {
+      const consulta = normalizar(filtros.texto?.value.trim());
+      const visibles = registros.filter(registro => {
+        const texto = [
+          registro.titulo, registro.descripcion, registro.id,
+          registro.ubicacion?.departamento, registro.ubicacion?.municipio,
+          registro.clasificacion?.grupo
+        ].map(normalizar).join(" ");
+        return (!consulta || texto.includes(consulta)) &&
+          (!filtros.departamento?.value || registro.ubicacion?.departamento === filtros.departamento.value) &&
+          (!filtros.municipio?.value || registro.ubicacion?.municipio === filtros.municipio.value) &&
+          (!filtros.periodo?.value || registro.clasificacion?.periodoGeologico === filtros.periodo.value) &&
+          (!filtros.grupo?.value || registro.clasificacion?.grupo === filtros.grupo.value) &&
+          (!filtros.estado?.value || registro.estadoVerificacion === filtros.estado.value);
+      });
+      contenedor.replaceChildren();
+      visibles.forEach(registro => contenedor.appendChild(crearTarjeta(registro)));
+      if (!visibles.length) contenedor.appendChild(elemento("p", "No se encontraron registros con estos filtros."));
+      if (contador) contador.textContent = `${visibles.length} de ${registros.length} registros`;
+    }
+    filtros.departamento?.addEventListener("change", () => { actualizarMunicipios(); renderizar(); });
+    Object.entries(filtros).filter(([nombre]) => nombre !== "departamento").forEach(([,control]) => {
+      control?.addEventListener("input", renderizar);
+      control?.addEventListener("change", renderizar);
     });
+    limpiar?.addEventListener("click", () => {
+      Object.values(filtros).forEach(control => { if (control) control.value = ""; });
+      actualizarMunicipios();
+      renderizar();
+    });
+    actualizarMunicipios();
+    renderizar();
 
   } catch (error) {
     console.error("Error del catálogo:", error);
