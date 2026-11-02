@@ -91,34 +91,43 @@
     </div>
   </section>
 
+
+<!-- Hito 1.3.3: Catálogo visual -->
 <section id="catalogo" class="catalogo">
   <div class="section-heading">
     <div>
-      <span class="eyebrow dark">
-        CATÁLOGO PALEONTOLÓGICO
-      </span>
+      <span class="eyebrow dark">CATÁLOGO PALEONTOLÓGICO</span>
       <h2>Explora nuestras fichas</h2>
       <p>
-        Consulta registros demostrativos y su documentación.
-        Próximamente incorporaremos información científica
-        verificada.
+        Descubre registros paleontológicos, su clasificación
+        y documentación. Los datos demostrativos están
+        identificados claramente.
       </p>
     </div>
+    <span class="demo">CATÁLOGO EN DESARROLLO</span>
   </div>
 
-  <div class="catalogo-layout">
-    <aside class="catalogo-lista">
-      <h3>Registros disponibles</h3>
-      <div id="catalogo-registros">
-        Cargando catálogo...
-      </div>
-    </aside>
-
-    <article class="catalogo-ficha" id="catalogo-detalle">
-      <p>Selecciona un registro para consultar su ficha.</p>
-    </article>
+  <div id="catalogo-registros" class="catalogo-grid">
+    <p>Cargando catálogo...</p>
   </div>
 </section>
+
+<!-- Ventana emergente de la ficha -->
+<dialog id="catalogo-modal" class="catalogo-modal"
+        aria-labelledby="catalogo-modal-titulo">
+  <div class="catalogo-modal-header">
+    <div>
+      <span class="eyebrow dark">FICHA PALEONTOLÓGICA</span>
+      <h2 id="catalogo-modal-titulo">Detalle del registro</h2>
+    </div>
+    <button id="catalogo-cerrar"
+            class="catalogo-cerrar"
+            type="button"
+            aria-label="Cerrar ficha">×</button>
+  </div>
+
+  <div id="catalogo-detalle" class="catalogo-detalle"></div>
+</dialog>
   
 <section id="colecciones" class="collections">
   <span class="eyebrow dark">CONOCE EL PROYECTO</span>
