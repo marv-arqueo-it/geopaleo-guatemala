@@ -5,6 +5,12 @@
   const contenedor = document.querySelector("#map");
   if (!contenedor || typeof map === "undefined" || typeof controlCapas === "undefined") return;
 
+  const aviso = document.createElement("p");
+  aviso.className = "geo-capa-estado";
+  aviso.setAttribute("role", "status");
+  aviso.textContent = "Cargando límites departamentales…";
+  contenedor.closest(".map-layout")?.querySelector(".panel")?.appendChild(aviso);
+
   const normalizar = texto => String(texto || "")
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .toLocaleLowerCase("es").replace(/^departamento de\s+/, "").trim();
@@ -80,6 +86,8 @@
     });
 
     controlCapas.addOverlay(poligonos, "Departamentos: referencias históricas");
+    aviso.textContent = "Capa departamental disponible: ábrela desde el botón de capas del mapa.";
+    aviso.classList.add("geo-capa-ok");
     // No activar automáticamente: conservar el mapa existente y evitar superposición.
     let visible = false;
     map.on("overlayadd", e => {
@@ -97,5 +105,6 @@
     }
   } catch (error) {
     console.warn("No se pudo cargar la capa departamental. El mapa base permanece disponible.", error);
+    aviso.textContent = "La capa de polígonos no pudo cargarse. El mapa y las fichas siguen disponibles. Detalle: " + error.message;
   }
 })();
