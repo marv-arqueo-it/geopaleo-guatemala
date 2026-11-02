@@ -16,11 +16,13 @@
       "municipio": null,
       "descripcionGeneral": "Ubicación no documentada",
       "coordenadasPublicas": null,
-      "precision": "no_disponible"
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
     },
     "documentacion": {
       "imagenes": [],
-      "referencias": []
+      "referencias": [],
+      "nota": "Adjuntar únicamente fotografías con procedencia, autoría y derechos de uso documentados. No se publican coordenadas exactas."
     },
     "control": {
       "institucionFuente": null,
