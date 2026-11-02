@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     opciones(filtros.estado, registros.map(r => r.estadoVerificacion), nombreEstado);
     function normalizar(valor) {
       return String(valor ?? "").normalize("NFD")
-        .replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("es");
+        .replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
     }
     function renderizar() {
       const consulta = normalizar(filtros.texto?.value.trim());
