@@ -8,7 +8,7 @@ const base = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 const capaDemo = L.layerGroup().addTo(map);
 const capaVerificada = L.layerGroup().addTo(map);
 const capaHistorica = L.layerGroup().addTo(map);
-L.control.layers(null, {
+const controlCapas = L.control.layers(null, {
   "Referencias ilustrativas": capaDemo,
   "Referencias históricas por departamento (orientativas)": capaHistorica,
   "Hallazgos públicos verificados": capaVerificada
