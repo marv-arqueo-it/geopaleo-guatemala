@@ -258,6 +258,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const filtros = {
       texto: document.querySelector("#filtro-texto"),
       departamento: document.querySelector("#filtro-departamento"),
+      municipio: document.querySelector("#filtro-municipio"),
       periodo: document.querySelector("#filtro-periodo"),
       grupo: document.querySelector("#filtro-grupo"),
       estado: document.querySelector("#filtro-estado")
@@ -282,6 +283,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
     opciones(filtros.departamento, registros.map(r => r.ubicacion?.departamento));
+    opciones(filtros.municipio, registros.map(r => r.ubicacion?.municipio));
     opciones(filtros.periodo, registros.map(r => r.clasificacion?.periodoGeologico));
     opciones(filtros.grupo, registros.map(r => r.clasificacion?.grupo));
     opciones(filtros.estado, registros.map(r => r.estadoVerificacion), nombreEstado);
@@ -299,6 +301,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         ].map(normalizar).join(" ");
         return (!consulta || texto.includes(consulta)) &&
           (!filtros.departamento?.value || registro.ubicacion?.departamento === filtros.departamento.value) &&
+          (!filtros.municipio?.value || registro.ubicacion?.municipio === filtros.municipio.value) &&
           (!filtros.periodo?.value || registro.clasificacion?.periodoGeologico === filtros.periodo.value) &&
           (!filtros.grupo?.value || registro.clasificacion?.grupo === filtros.grupo.value) &&
           (!filtros.estado?.value || registro.estadoVerificacion === filtros.estado.value);
@@ -307,6 +310,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       visibles.forEach(registro => contenedor.appendChild(crearTarjeta(registro)));
       if (!visibles.length) contenedor.appendChild(elemento("p", "No se encontraron registros con estos filtros."));
       if (contador) contador.textContent = `${visibles.length} de ${registros.length} registros`;
+      if (filtros.municipio) {
+        const anterior = filtros.municipio.value;
+        const disponibles = registros.filter(r => !filtros.departamento?.value || r.ubicacion?.departamento === filtros.departamento.value).map(r => r.ubicacion?.municipio);
+        filtros.municipio.replaceChildren(new Option("Todos", ""));
+        opciones(filtros.municipio, disponibles);
+        filtros.municipio.value = disponibles.includes(anterior) ? anterior : "";
+      }
     }
     Object.values(filtros).forEach(control => {
       control?.addEventListener("input", renderizar);
