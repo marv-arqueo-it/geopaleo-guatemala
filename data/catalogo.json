@@ -29,5 +29,205 @@
       "responsableRevision": null,
       "fechaActualizacion": null
     }
+  },
+  {
+    "id": "GP-HIST-001",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Hacienda El Peñol (Atescatempa)",
+    "descripcion": "Referencia colonial de 1690 sobre restos óseos de grandes animales, descritos entonces como huesos de gigantes. Identificación taxonómica no establecida en esta referencia.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta ficha",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Jutiapa",
+      "municipio": "Atescatempa",
+      "descripcionGeneral": "Hacienda El Peñol, localidad histórica; sitio exacto no publicado.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "Tesis de licenciatura, Escuela de Historia, Universidad de San Carlos de Guatemala. Capítulo IV, pp. 38-39.",
+          "paginas": "38-39",
+          "nota": "Fuente secundaria histórica; requiere corroboración con fuentes primarias y revisión taxonómica."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Universidad de San Carlos de Guatemala (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1690"
+    }
+  },
+  {
+    "id": "GP-HIST-002",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Río Chinaca (Huehuetenango)",
+    "descripcion": "Relato histórico atribuido a John Lloyd Stephens sobre restos de un gran animal interpretado como mastodonte en las riberas del río Chinaca, referido también como río Cuyumpá.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscidea (identificación histórica)",
+      "taxon": "Proboscidea (identificación histórica)",
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Huehuetenango",
+      "municipio": "Huehuetenango",
+      "descripcionGeneral": "Río Chinaca / Cuyumpá; ubicación exacta no publicada.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "Tesis de licenciatura, Escuela de Historia, Universidad de San Carlos de Guatemala. Capítulo IV, pp. 38-40.",
+          "paginas": "38-40",
+          "nota": "Fuente secundaria histórica; requiere corroboración con fuentes primarias y revisión taxonómica."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Universidad de San Carlos de Guatemala (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1839"
+    }
+  },
+  {
+    "id": "GP-HIST-003",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Hacienda San Carlos (Bárcenas)",
+    "descripcion": "Referencia histórica a restos de un animal denominado mastodonte en el área de la antigua Bárcenas, Villa Nueva. La monografía incluye referencias de Navarro (1856) y un cuadro fechado en 1858.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscidea (identificación histórica)",
+      "taxon": "Proboscidea (identificación histórica)",
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": "Villa Nueva",
+      "descripcionGeneral": "Antigua Bárcenas, Hacienda San Carlos; sitio exacto no publicado.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "Tesis de licenciatura, Escuela de Historia, Universidad de San Carlos de Guatemala. Capítulo IV, pp. 38, 40.",
+          "paginas": "38, 40",
+          "nota": "Fuente secundaria histórica; requiere corroboración con fuentes primarias y revisión taxonómica."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Universidad de San Carlos de Guatemala (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1856/1858 (referencias históricas)"
+    }
+  },
+  {
+    "id": "GP-HIST-004",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Chinautla: referencias de megafauna",
+    "descripcion": "La monografía recopila referencias de 1875-1876 a fragmentos atribuidos a perezoso gigante, proboscídeo y caballo americano. La ubicación precisa no está documentada.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Megafauna diversa (atribuciones históricas)",
+      "taxon": "Megafauna diversa (atribuciones históricas)",
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": "Chinautla",
+      "descripcionGeneral": "Área general de Chinautla; ubicación exacta no documentada.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "Tesis de licenciatura, Escuela de Historia, Universidad de San Carlos de Guatemala. Capítulo IV, pp. 38, 41.",
+          "paginas": "38, 41",
+          "nota": "Fuente secundaria histórica; requiere corroboración con fuentes primarias y revisión taxonómica."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Universidad de San Carlos de Guatemala (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1875-1876"
+    }
+  },
+  {
+    "id": "GP-HIST-005",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: referencias tempranas",
+    "descripcion": "La monografía incluye referencias históricas a hallazgos de megafauna en Estanzuela, con cronología presentada como 1935-1945 y nuevas referencias en 1947-1950. Esta ficha inicial no atribuye un taxón concreto.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta ficha",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Municipio de Estanzuela; sitio exacto no documentado.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "Tesis de licenciatura, Escuela de Historia, Universidad de San Carlos de Guatemala. Capítulo IV, pp. 38, 42.",
+          "paginas": "38, 42",
+          "nota": "Fuente secundaria histórica; requiere corroboración con fuentes primarias y revisión taxonómica."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Universidad de San Carlos de Guatemala (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1935-1950 (referencias de distintas etapas)"
+    }
   }
 ]
