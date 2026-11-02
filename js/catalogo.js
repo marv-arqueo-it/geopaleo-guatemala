@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     seccion(detalle, "Clasificación paleontológica");
     campo(detalle, "Grupo", registro.clasificacion?.grupo);
     campo(detalle, "Taxón", registro.clasificacion?.taxon);
+    if (registro.clasificacion?.estadoDatacion) campo(detalle, "Datación", registro.clasificacion.estadoDatacion);
+    if (registro.clasificacion?.fundamentoGeologico) campo(detalle, "Fundamento geológico", registro.clasificacion.fundamentoGeologico);
     campo(
       detalle,
       "Período geológico",
@@ -87,6 +89,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     seccion(detalle, "Ubicación general");
     campo(detalle, "Departamento", registro.ubicacion?.departamento);
     campo(detalle, "Municipio", registro.ubicacion?.municipio);
+    if (registro.ubicacion?.regionGeografica) campo(detalle, "Región", registro.ubicacion.regionGeografica);
+    if (registro.ubicacion?.nivelLocalizacion) campo(detalle, "Nivel de localización", registro.ubicacion.nivelLocalizacion);
+    if (registro.ubicacion?.fuenteGeografica) campo(detalle, "Fuente de ubicación", registro.ubicacion.fuenteGeografica);
+    if (registro.ubicacion?.notaCartografica) campo(detalle, "Precaución cartográfica", registro.ubicacion.notaCartografica);
     campo(
       detalle,
       "Referencia",
