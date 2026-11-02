@@ -107,6 +107,25 @@
     <span class="demo">CATÁLOGO EN DESARROLLO</span>
   </div>
 
+  <div class="catalogo-filtros" role="search" aria-label="Filtrar catálogo">
+    <label>Buscar
+      <input id="filtro-texto" type="search" placeholder="Hallazgo, localidad, código...">
+    </label>
+    <label>Departamento
+      <select id="filtro-departamento"><option value="">Todos</option></select>
+    </label>
+    <label>Período geológico
+      <select id="filtro-periodo"><option value="">Todos</option></select>
+    </label>
+    <label>Grupo de fauna
+      <select id="filtro-grupo"><option value="">Todos</option></select>
+    </label>
+    <label>Estado
+      <select id="filtro-estado"><option value="">Todos</option></select>
+    </label>
+    <button id="filtro-limpiar" type="button">Limpiar filtros</button>
+  </div>
+  <p id="catalogo-contador" class="catalogo-contador" aria-live="polite"></p>
   <div id="catalogo-registros" class="catalogo-grid">
     <p>Cargando catálogo...</p>
   </div>
