@@ -255,9 +255,68 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    registros.forEach(registro => {
-      contenedor.appendChild(crearTarjeta(registro));
+    const filtros = {
+      texto: document.querySelector("#filtro-texto"),
+      departamento: document.querySelector("#filtro-departamento"),
+      periodo: document.querySelector("#filtro-periodo"),
+      grupo: document.querySelector("#filtro-grupo"),
+      estado: document.querySelector("#filtro-estado")
+    };
+    const contador = document.querySelector("#catalogo-contador");
+    const limpiar = document.querySelector("#filtro-limpiar");
+    const nombreEstado = {
+      demostrativo: "Demostrativo",
+      referencia_historica: "Referencia histórica",
+      verificado: "Verificado",
+      pendiente: "Pendiente de verificación"
+    };
+    function opciones(select, valores, etiquetas = {}) {
+      if (!select) return;
+      [...new Set(valores.filter(v => typeof v === "string" && v.trim()))]
+        .sort((a, b) => a.localeCompare(b, "es"))
+        .forEach(valor => {
+          const option = document.createElement("option");
+          option.value = valor;
+          option.textContent = etiquetas[valor] || valor;
+          select.appendChild(option);
+        });
+    }
+    opciones(filtros.departamento, registros.map(r => r.ubicacion?.departamento));
+    opciones(filtros.periodo, registros.map(r => r.clasificacion?.periodoGeologico));
+    opciones(filtros.grupo, registros.map(r => r.clasificacion?.grupo));
+    opciones(filtros.estado, registros.map(r => r.estadoVerificacion), nombreEstado);
+    function normalizar(valor) {
+      return String(valor ?? "").normalize("NFD")
+        .replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("es");
+    }
+    function renderizar() {
+      const consulta = normalizar(filtros.texto?.value.trim());
+      const visibles = registros.filter(registro => {
+        const texto = [
+          registro.titulo, registro.descripcion, registro.id,
+          registro.ubicacion?.departamento, registro.ubicacion?.municipio,
+          registro.clasificacion?.grupo
+        ].map(normalizar).join(" ");
+        return (!consulta || texto.includes(consulta)) &&
+          (!filtros.departamento?.value || registro.ubicacion?.departamento === filtros.departamento.value) &&
+          (!filtros.periodo?.value || registro.clasificacion?.periodoGeologico === filtros.periodo.value) &&
+          (!filtros.grupo?.value || registro.clasificacion?.grupo === filtros.grupo.value) &&
+          (!filtros.estado?.value || registro.estadoVerificacion === filtros.estado.value);
+      });
+      contenedor.replaceChildren();
+      visibles.forEach(registro => contenedor.appendChild(crearTarjeta(registro)));
+      if (!visibles.length) contenedor.appendChild(elemento("p", "No se encontraron registros con estos filtros."));
+      if (contador) contador.textContent = `${visibles.length} de ${registros.length} registros`;
+    }
+    Object.values(filtros).forEach(control => {
+      control?.addEventListener("input", renderizar);
+      control?.addEventListener("change", renderizar);
     });
+    limpiar?.addEventListener("click", () => {
+      Object.values(filtros).forEach(control => { if (control) control.value = ""; });
+      renderizar();
+    });
+    renderizar();
 
   } catch (error) {
     console.error("Error del catálogo:", error);
