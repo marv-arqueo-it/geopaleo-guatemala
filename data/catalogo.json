@@ -39,8 +39,10 @@
     "clasificacion": {
       "grupo": "No determinado en esta ficha",
       "taxon": null,
-      "periodoGeologico": "No confirmado para este registro",
-      "antiguedadEstimada": null
+      "periodoGeologico": "Pleistoceno final (contexto bibliográfico)",
+      "antiguedadEstimada": null,
+      "estadoDatacion": "Sin datación individual confirmada",
+      "fundamentoGeologico": "La monografía estudia megafauna del Pleistoceno final; este encuadre no constituye una datación estratigráfica del hallazgo particular."
     },
     "ubicacion": {
       "departamento": "Jutiapa",
@@ -48,7 +50,12 @@
       "descripcionGeneral": "Hacienda El Peñol, localidad histórica; sitio exacto no publicado.",
       "coordenadasPublicas": null,
       "precision": "no_disponible",
-      "publicacionAutorizada": false
+      "publicacionAutorizada": false,
+      "regionGeografica": "Oriente",
+      "pais": "Guatemala",
+      "nivelLocalizacion": "Referencia histórica por localidad y municipio",
+      "fuenteGeografica": "Localidad mencionada en la tesis de Colón Morales (2015), capítulo IV",
+      "notaCartografica": "Sin coordenadas verificadas. No se representa el punto exacto del hallazgo."
     },
     "documentacion": {
       "imagenes": [],
@@ -79,8 +86,10 @@
     "clasificacion": {
       "grupo": "Proboscidea (identificación histórica)",
       "taxon": "Proboscidea (identificación histórica)",
-      "periodoGeologico": "No confirmado para este registro",
-      "antiguedadEstimada": null
+      "periodoGeologico": "Pleistoceno final (contexto bibliográfico)",
+      "antiguedadEstimada": null,
+      "estadoDatacion": "Sin datación individual confirmada",
+      "fundamentoGeologico": "La monografía estudia megafauna del Pleistoceno final; este encuadre no constituye una datación estratigráfica del hallazgo particular."
     },
     "ubicacion": {
       "departamento": "Huehuetenango",
@@ -88,7 +97,12 @@
       "descripcionGeneral": "Río Chinaca / Cuyumpá; ubicación exacta no publicada.",
       "coordenadasPublicas": null,
       "precision": "no_disponible",
-      "publicacionAutorizada": false
+      "publicacionAutorizada": false,
+      "regionGeografica": "Occidente",
+      "pais": "Guatemala",
+      "nivelLocalizacion": "Referencia histórica por localidad y municipio",
+      "fuenteGeografica": "Localidad mencionada en la tesis de Colón Morales (2015), capítulo IV",
+      "notaCartografica": "Sin coordenadas verificadas. No se representa el punto exacto del hallazgo."
     },
     "documentacion": {
       "imagenes": [],
@@ -119,8 +133,10 @@
     "clasificacion": {
       "grupo": "Proboscidea (identificación histórica)",
       "taxon": "Proboscidea (identificación histórica)",
-      "periodoGeologico": "No confirmado para este registro",
-      "antiguedadEstimada": null
+      "periodoGeologico": "Pleistoceno final (contexto bibliográfico)",
+      "antiguedadEstimada": null,
+      "estadoDatacion": "Sin datación individual confirmada",
+      "fundamentoGeologico": "La monografía estudia megafauna del Pleistoceno final; este encuadre no constituye una datación estratigráfica del hallazgo particular."
     },
     "ubicacion": {
       "departamento": "Guatemala",
@@ -128,7 +144,12 @@
       "descripcionGeneral": "Antigua Bárcenas, Hacienda San Carlos; sitio exacto no publicado.",
       "coordenadasPublicas": null,
       "precision": "no_disponible",
-      "publicacionAutorizada": false
+      "publicacionAutorizada": false,
+      "regionGeografica": "Central",
+      "pais": "Guatemala",
+      "nivelLocalizacion": "Referencia histórica por localidad y municipio",
+      "fuenteGeografica": "Localidad mencionada en la tesis de Colón Morales (2015), capítulo IV",
+      "notaCartografica": "Sin coordenadas verificadas. No se representa el punto exacto del hallazgo."
     },
     "documentacion": {
       "imagenes": [],
@@ -159,8 +180,10 @@
     "clasificacion": {
       "grupo": "Megafauna diversa (atribuciones históricas)",
       "taxon": "Megafauna diversa (atribuciones históricas)",
-      "periodoGeologico": "No confirmado para este registro",
-      "antiguedadEstimada": null
+      "periodoGeologico": "Pleistoceno final (contexto bibliográfico)",
+      "antiguedadEstimada": null,
+      "estadoDatacion": "Sin datación individual confirmada",
+      "fundamentoGeologico": "La monografía estudia megafauna del Pleistoceno final; este encuadre no constituye una datación estratigráfica del hallazgo particular."
     },
     "ubicacion": {
       "departamento": "Guatemala",
@@ -168,7 +191,12 @@
       "descripcionGeneral": "Área general de Chinautla; ubicación exacta no documentada.",
       "coordenadasPublicas": null,
       "precision": "no_disponible",
-      "publicacionAutorizada": false
+      "publicacionAutorizada": false,
+      "regionGeografica": "Central",
+      "pais": "Guatemala",
+      "nivelLocalizacion": "Referencia histórica por localidad y municipio",
+      "fuenteGeografica": "Localidad mencionada en la tesis de Colón Morales (2015), capítulo IV",
+      "notaCartografica": "Sin coordenadas verificadas. No se representa el punto exacto del hallazgo."
     },
     "documentacion": {
       "imagenes": [],
@@ -199,8 +227,10 @@
     "clasificacion": {
       "grupo": "No determinado en esta ficha",
       "taxon": null,
-      "periodoGeologico": "No confirmado para este registro",
-      "antiguedadEstimada": null
+      "periodoGeologico": "Pleistoceno final (contexto bibliográfico)",
+      "antiguedadEstimada": null,
+      "estadoDatacion": "Sin datación individual confirmada",
+      "fundamentoGeologico": "La monografía estudia megafauna del Pleistoceno final; este encuadre no constituye una datación estratigráfica del hallazgo particular."
     },
     "ubicacion": {
       "departamento": "Zacapa",
@@ -208,7 +238,12 @@
       "descripcionGeneral": "Municipio de Estanzuela; sitio exacto no documentado.",
       "coordenadasPublicas": null,
       "precision": "no_disponible",
-      "publicacionAutorizada": false
+      "publicacionAutorizada": false,
+      "regionGeografica": "Oriente",
+      "pais": "Guatemala",
+      "nivelLocalizacion": "Referencia histórica por localidad y municipio",
+      "fuenteGeografica": "Localidad mencionada en la tesis de Colón Morales (2015), capítulo IV",
+      "notaCartografica": "Sin coordenadas verificadas. No se representa el punto exacto del hallazgo."
     },
     "documentacion": {
       "imagenes": [],
