@@ -7,8 +7,10 @@ const base = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const capaDemo = L.layerGroup().addTo(map);
 const capaVerificada = L.layerGroup().addTo(map);
+const capaHistorica = L.layerGroup().addTo(map);
 L.control.layers(null, {
   "Referencias ilustrativas": capaDemo,
+  "Referencias históricas por departamento (orientativas)": capaHistorica,
   "Hallazgos públicos verificados": capaVerificada
 }, { collapsed: true }).addTo(map);
 
@@ -74,6 +76,45 @@ fetch("data/catalogo.json")
   .then(r => { if (!r.ok) throw Error("No se pudo leer el catálogo"); return r.json(); })
   .then(registros => {
     if (!Array.isArray(registros)) return;
+
+    // Cabeceras departamentales: puntos de orientación, NO sitios paleontológicos.
+    // Pendiente: sustituir esta vista por polígonos oficiales con licencia validada.
+    const cabeceras = {
+      "Guatemala": [14.6349, -90.5069],
+      "Huehuetenango": [15.3197, -91.4708],
+      "Jutiapa": [14.2917, -89.8958],
+      "Zacapa": [14.9722, -89.5306]
+    };
+    const porDepartamento = new Map();
+    registros.filter(r => r.estadoVerificacion === "referencia_historica")
+      .forEach(r => {
+        const dep = r.ubicacion?.departamento;
+        if (!dep) return;
+        if (!porDepartamento.has(dep)) porDepartamento.set(dep, []);
+        porDepartamento.get(dep).push(r);
+      });
+    porDepartamento.forEach((fichas, dep) => {
+      if (!cabeceras[dep]) return;
+      const punto = L.circleMarker(cabeceras[dep], {
+        radius: 11, color: "#fff", weight: 2, fillColor: "#8555a4", fillOpacity: .9
+      }).addTo(capaHistorica);
+      const popup = document.createElement("div");
+      const titulo = document.createElement("strong");
+      titulo.textContent = dep + ": " + fichas.length + " referencia(s) histórica(s)";
+      const nota = document.createElement("p");
+      nota.textContent = "Marcador en cabecera departamental para orientación. NO representa un yacimiento ni las coordenadas de un fósil.";
+      const lista = document.createElement("ul");
+      fichas.forEach(f => {
+        const item = document.createElement("li");
+        item.textContent = (f.ubicacion?.municipio || "Municipio no indicado") + ": " + f.titulo;
+        lista.appendChild(item);
+      });
+      const enlace = document.createElement("a");
+      enlace.href = "#catalogo";
+      enlace.textContent = "Consultar fichas históricas";
+      popup.append(titulo, nota, lista, enlace);
+      punto.bindPopup(popup, { maxWidth: 340 });
+    });
     registros.forEach(registro => {
       const u = registro.ubicacion || {};
       const coords = u.coordenadasPublicas;
