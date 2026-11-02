@@ -291,6 +291,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       return String(valor ?? "").normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
     }
+    function actualizarMunicipios() {
+      if (!filtros.municipio) return;
+      const anterior = filtros.municipio.value;
+      const disponibles = registros.filter(r => !filtros.departamento?.value || r.ubicacion?.departamento === filtros.departamento.value).map(r => r.ubicacion?.municipio);
+      filtros.municipio.replaceChildren(new Option("Todos", ""));
+      opciones(filtros.municipio, disponibles);
+      filtros.municipio.value = disponibles.includes(anterior) ? anterior : "";
+    }
     function renderizar() {
       const consulta = normalizar(filtros.texto?.value.trim());
       const visibles = registros.filter(registro => {
@@ -310,22 +318,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       visibles.forEach(registro => contenedor.appendChild(crearTarjeta(registro)));
       if (!visibles.length) contenedor.appendChild(elemento("p", "No se encontraron registros con estos filtros."));
       if (contador) contador.textContent = `${visibles.length} de ${registros.length} registros`;
-      if (filtros.municipio) {
-        const anterior = filtros.municipio.value;
-        const disponibles = registros.filter(r => !filtros.departamento?.value || r.ubicacion?.departamento === filtros.departamento.value).map(r => r.ubicacion?.municipio);
-        filtros.municipio.replaceChildren(new Option("Todos", ""));
-        opciones(filtros.municipio, disponibles);
-        filtros.municipio.value = disponibles.includes(anterior) ? anterior : "";
-      }
     }
-    Object.values(filtros).forEach(control => {
+    filtros.departamento?.addEventListener("change", () => { actualizarMunicipios(); renderizar(); });
+    Object.entries(filtros).filter(([nombre]) => nombre !== "departamento").forEach(([,control]) => {
       control?.addEventListener("input", renderizar);
       control?.addEventListener("change", renderizar);
     });
     limpiar?.addEventListener("click", () => {
       Object.values(filtros).forEach(control => { if (control) control.value = ""; });
+      actualizarMunicipios();
       renderizar();
     });
+    actualizarMunicipios();
     renderizar();
 
   } catch (error) {
