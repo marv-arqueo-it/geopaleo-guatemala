@@ -271,3 +271,14 @@
         transition: none;
     }
 }
+.coleccion-enlace {
+    display: inline-block;
+    margin-top: 8px;
+    color: #946a37;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.coleccion-enlace:hover {
+    text-decoration: underline;
+}
