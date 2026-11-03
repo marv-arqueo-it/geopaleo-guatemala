@@ -229,5 +229,45 @@
       "fechaActualizacion": null,
       "fechaReferenciaHistorica": "1935-1950 (referencias de distintas etapas)"
     }
+  },
+  {
+    "id": "GP-HIST-006",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Finca San Ramón (cuenca del río Las Vacas)",
+    "descripcion": "La monografía documenta excavaciones de 1972 en Finca San Ramón y presenta fotografías con atribuciones históricas a restos de proboscídeo y perezoso gigante. Las identificaciones taxonómicas se reproducen como atribuciones de la fuente, sin verificación independiente.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Megafauna diversa (atribuciones históricas)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": null,
+      "descripcionGeneral": "Finca San Ramón, cuenca del río Las Vacas, límite entre los municipios de Guatemala y Chinautla según la tesis. Sin coordenadas públicas verificadas.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "Tesis de licenciatura, Universidad de San Carlos de Guatemala; cronología de excavaciones de 1972 y pies de fotografías 15 y 16.",
+          "paginas": "43 (cronología), 190-191 (fotografías; numeración impresa)",
+          "nota": "Fuente secundaria. Las atribuciones de Cuvieronius y Eremotherium citadas en las fotografías no se presentan como identificaciones confirmadas por GeoPaleo."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Universidad de San Carlos de Guatemala (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1972"
+    }
   }
 ]
