@@ -322,9 +322,14 @@
 .geo-capa-estado{margin-top:14px;padding:10px;border-left:3px solid #bd8d47;background:#fff9ed;color:#65512e;font-size:11px;line-height:1.5;border-radius:4px}
 .geo-capa-estado.geo-capa-ok{border-left-color:#4c8a76;background:#eff8f3;color:#2d5a4b}
 
-/* Hito 1.3.9: listado de localidades históricas sin coordenadas de yacimiento */
-.atlas-historicas-titulo{font-size:13px;line-height:1.35;margin:20px 0 8px;color:#203142}
-#atlas-localidades{display:grid;gap:7px;margin-top:12px}
-.atlas-localidad{display:flex;flex-direction:column;gap:4px;text-align:left;width:100%;border:1px solid #dce4e6;border-radius:7px;padding:10px;background:#f7f9f9;color:#203142;cursor:pointer}
-.atlas-localidad:hover,.atlas-localidad:focus-visible{border-color:#a56b2b;background:#fff9ed}
-.atlas-localidad strong{font-size:12px}.atlas-localidad small{font-size:10px;color:#607080;line-height:1.4}
+/* Hito 1.3.8: resumen y leyenda de capas */
+.atlas-resumen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.atlas-resumen>div{display:flex;flex-direction:column;gap:5px;padding:16px;border:1px solid #dce4e6;border-radius:10px;background:#fff}
+.atlas-resumen strong{font-size:25px;color:#223341}
+.atlas-resumen span{font-size:12px;color:#526473}
+.atlas-leyenda{display:flex;flex-direction:column;gap:9px;margin-top:12px;font-size:11px;color:#364858}
+.atlas-leyenda>div{display:flex;align-items:center;gap:8px}
+.atlas-leyenda small{font-size:10px;color:#657583;line-height:1.4}
+.atlas-punto{width:11px;height:11px;display:inline-block;flex:none;border-radius:50%}
+.atlas-punto.historico{background:#8555a4}.atlas-punto.verificado{background:#247d72}
+@media(max-width:700px){.atlas-resumen{grid-template-columns:repeat(2,minmax(0,1fr))}}

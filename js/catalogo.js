@@ -336,6 +336,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       actualizarMunicipios();
       renderizar();
     });
+    const resumen = document.querySelector("#atlas-resumen");
+    if (resumen) {
+      const historicas = registros.filter(r => r.estadoVerificacion === "referencia_historica").length;
+      const verificadas = registros.filter(r => r.estadoVerificacion === "verificado").length;
+      const demo = registros.filter(r => r.estadoVerificacion === "demostrativo").length;
+      for (const [numero, etiqueta] of [[registros.length, "Fichas del catálogo"], [historicas, "Referencias históricas"], [verificadas, "Hallazgos verificados"], [demo, "Fichas demostrativas"]]) {
+        const tarjeta = document.createElement("div");
+        const cifra = elemento("strong", String(numero));
+        const descripcion = elemento("span", etiqueta);
+        tarjeta.append(cifra, descripcion);
+        resumen.appendChild(tarjeta);
+      }
+    }
+    document.addEventListener("geopaleo:filtrar-departamento", evento => {
+      const dep = evento.detail?.departamento;
+      if (!dep || !filtros.departamento) return;
+      const opcion = [...filtros.departamento.options].find(o => normalizar(o.value) === normalizar(dep));
+      if (!opcion) return;
+      filtros.departamento.value = opcion.value;
+      actualizarMunicipios();
+      renderizar();
+      document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
     actualizarMunicipios();
     renderizar();
 
