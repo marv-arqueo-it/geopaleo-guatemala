@@ -28,20 +28,41 @@
   };
 
   try {
-    const [respuestaCatalogo, respuestaMeta] = await Promise.all([
-      fetch("data/catalogo.json"),
-      fetch("https://www.geoboundaries.org/api/current/gbOpen/GTM/ADM1/")
-    ]);
-    if (!respuestaCatalogo.ok || !respuestaMeta.ok) throw new Error("No se pudieron consultar las fuentes.");
-    const [registros, meta] = await Promise.all([respuestaCatalogo.json(), respuestaMeta.json()]);
-    if (!Array.isArray(registros) || !/^https:\/\//.test(meta.gjDownloadURL || "")) {
-      throw new Error("Fuentes con formato inesperado.");
+    const respuestaCatalogo = await fetch("data/catalogo.json");
+    if (!respuestaCatalogo.ok) throw new Error("No se pudo leer el catálogo.");
+    const registros = await respuestaCatalogo.json();
+    if (!Array.isArray(registros)) throw new Error("Catálogo con formato inesperado.");
+
+    // Se intenta primero una copia local versionada. Si todavía no existe,
+    // se recurre al servicio oficial de geoBoundaries.
+    async function leerGeoJSON(url) {
+      const respuesta = await fetch(url, { cache: "no-cache" });
+      if (!respuesta.ok) throw new Error("HTTP " + respuesta.status);
+      const datos = await respuesta.json();
+      if (datos.type !== "FeatureCollection" || !Array.isArray(datos.features) || !datos.features.length) {
+        throw new Error("GeoJSON inválido o sin departamentos.");
+      }
+      return datos;
     }
-    const respuestaGeo = await fetch(meta.gjDownloadURL);
-    if (!respuestaGeo.ok) throw new Error("No se pudieron descargar los límites.");
-    const geojson = await respuestaGeo.json();
-    if (geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) {
-      throw new Error("Límites geográficos inválidos.");
+
+    let geojson;
+    let procedencia = "geoBoundaries gbOpen ADM1";
+    let licencia = "ODbL 1.0";
+    try {
+      geojson = await leerGeoJSON("data/guatemala-departamentos.geojson");
+      procedencia += " (copia local)";
+    } catch (localError) {
+      console.info("Copia local no disponible; consultando geoBoundaries.", localError.message);
+      try {
+        const respuestaMeta = await fetch("https://www.geoboundaries.org/api/current/gbOpen/GTM/ADM1/");
+        if (!respuestaMeta.ok) throw new Error("API geoBoundaries HTTP " + respuestaMeta.status);
+        const meta = await respuestaMeta.json();
+        if (!/^https:\/\//.test(meta.gjDownloadURL || "")) throw new Error("URL GeoJSON no válida.");
+        geojson = await leerGeoJSON(meta.gjDownloadURL);
+        licencia = meta.boundaryLicense || licencia;
+      } catch (externoError) {
+        throw new Error("No se encontraron límites locales y falló geoBoundaries: " + externoError.message);
+      }
     }
 
     const conteos = new Map();
@@ -96,13 +117,7 @@
     map.on("overlayremove", e => {
       if (e.layer === poligonos && visible) { leyenda.remove(); visible = false; }
     });
-    if (meta.boundaryLicense) {
-      map.attributionControl.addAttribution(
-        "Límites: geoBoundaries (" + String(meta.boundaryLicense).replace(/[<>]/g, "") + ")"
-      );
-    } else {
-      map.attributionControl.addAttribution("Límites: geoBoundaries");
-    }
+    map.attributionControl.addAttribution("Límites: " + procedencia + " (" + String(licencia).replace(/[<>]/g, "") + ")");
   } catch (error) {
     console.warn("No se pudo cargar la capa departamental. El mapa base permanece disponible.", error);
     aviso.textContent = "La capa de polígonos no pudo cargarse. El mapa y las fichas siguen disponibles. Detalle: " + error.message;
