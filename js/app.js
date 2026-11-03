@@ -112,6 +112,7 @@ fetch("data/catalogo.json")
       const enlace = document.createElement("a");
       enlace.href = "#catalogo";
       enlace.textContent = "Consultar fichas históricas";
+      enlace.addEventListener("click", () => document.dispatchEvent(new CustomEvent("geopaleo:filtrar-departamento", { detail: { departamento: dep } })));
       popup.append(titulo, nota, lista, enlace);
       punto.bindPopup(popup, { maxWidth: 340 });
     });
