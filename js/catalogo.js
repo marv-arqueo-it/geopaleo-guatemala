@@ -34,6 +34,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     padre.appendChild(elemento("h3", titulo, "ficha-subtitulo"));
   }
 
+  let registrosDisponibles = [];
+  document.addEventListener("geopaleo:abrir-ficha", evento => {
+    const registro = registrosDisponibles.find(r => r.id === evento.detail?.id);
+    if (registro) abrirFicha(registro);
+  });
+
   function abrirFicha(registro) {
     detalle.replaceChildren();
 
@@ -246,6 +252,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       throw new Error("El catálogo no contiene un arreglo JSON.");
     }
 
+    registrosDisponibles = registros;
     contenedor.replaceChildren();
 
     if (registros.length === 0) {
