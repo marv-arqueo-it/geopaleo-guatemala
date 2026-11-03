@@ -269,5 +269,245 @@
       "fechaActualizacion": null,
       "fechaReferenciaHistorica": "1972"
     }
+  },
+  {
+    "id": "GP-HIST-007",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Sanguayabá (Palencia)",
+    "descripcion": "La tesis registra el hallazgo histórico de restos atribuidos a mastodonte en la aldea Sanguayabá.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscidea (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "Pleistoceno final (contexto de la monografía)",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": "San José Palencia",
+      "descripcionGeneral": "Aldea Sanguayabá",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 41 (numeración impresa). Fuente citada: Woolfolk (1994), Gall (1990), citados por Colón Morales",
+          "paginas": "41",
+          "nota": "Referencia histórica sin verificación independiente; datos geográficos orientativos, sin coordenadas de yacimiento."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1865"
+    }
+  },
+  {
+    "id": "GP-HIST-008",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "El Sitio (El Adelanto)",
+    "descripcion": "La tesis reporta restos atribuidos a mastodonte; existe discrepancia histórica sobre el municipio.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscidea (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "Pleistoceno final (contexto de la monografía)",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Jutiapa",
+      "municipio": "El Adelanto",
+      "descripcionGeneral": "Localidad El Sitio; la fuente también recoge una atribución alternativa a Atescatempa",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 41 (numeración impresa). Fuente citada: Sociedad Económica y Woolfolk (1994), citados por Colón Morales",
+          "paginas": "41",
+          "nota": "Referencia histórica sin verificación independiente; datos geográficos orientativos, sin coordenadas de yacimiento."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1865"
+    }
+  },
+  {
+    "id": "GP-HIST-009",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Río Carboneras (Izabal)",
+    "descripcion": "Referencia a tres molares superiores atribuidos históricamente a Rhynchotherium blicki; la tesis estima 7–8 millones de años. No corresponde al Pleistoceno final, pero se incorpora por figurar en la monografía.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscidea (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "Mioceno (Hemfiliano temprano; atribución bibliográfica)",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Izabal",
+      "municipio": "Livingston",
+      "descripcionGeneral": "Cercanías del río Carboneras; Formación Herrería",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 41 (numeración impresa). Fuente citada: Frick (1933), Revista Geológica de América Central (1995), citados por Colón Morales",
+          "paginas": "41",
+          "nota": "Referencia histórica sin verificación independiente; datos geográficos orientativos, sin coordenadas de yacimiento."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1933"
+    }
+  },
+  {
+    "id": "GP-HIST-010",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Río La Pasión (Sayaxché)",
+    "descripcion": "La cronología de la tesis registra referencias paleontológicas del río La Pasión en 1950; requiere revisar la descripción específica del material.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Petén",
+      "municipio": "Sayaxché",
+      "descripcionGeneral": "Río La Pasión; tramo exacto no establecido",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 42 (numeración impresa). Fuente citada: Woolfolk (1994), citado por Colón Morales",
+          "paginas": "42",
+          "nota": "Referencia histórica sin verificación independiente; datos geográficos orientativos, sin coordenadas de yacimiento."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1950"
+    }
+  },
+  {
+    "id": "GP-HIST-011",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Tulumajé–Tulumajillo",
+    "descripcion": "La cronología de la tesis consigna una referencia paleontológica en Tulumajé–Tulumajillo en 1962.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "El Progreso",
+      "municipio": "San Agustín Acasaguastlán",
+      "descripcionGeneral": "Tulumajé–Tulumajillo; ubicación precisa no verificada",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 42 (numeración impresa). Fuente citada: Paleontología en Guatemala (1980), citado por Colón Morales",
+          "paginas": "42",
+          "nota": "Referencia histórica sin verificación independiente; datos geográficos orientativos, sin coordenadas de yacimiento."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1962"
+    }
+  },
+  {
+    "id": "GP-HIST-012",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "El Trifinio, Cerro Montecristo",
+    "descripcion": "La cronología de la tesis menciona una referencia paleontológica de 1974 en el área del Trifinio, Cerro Montecristo.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Chiquimula",
+      "municipio": "Concepción Las Minas",
+      "descripcionGeneral": "El Trifinio, Cerro Montecristo; localización específica no verificada",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre hallazgos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 44 (numeración impresa). Fuente citada: Woolfolk (1994), citado por Colón Morales",
+          "paginas": "44",
+          "nota": "Referencia histórica sin verificación independiente; datos geográficos orientativos, sin coordenadas de yacimiento."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1974"
+    }
   }
 ]
