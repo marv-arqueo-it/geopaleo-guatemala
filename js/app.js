@@ -86,13 +86,31 @@ fetch("data/catalogo.json")
       "Zacapa": [14.9722, -89.5306]
     };
     const porDepartamento = new Map();
-    registros.filter(r => r.estadoVerificacion === "referencia_historica")
+    registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion))
       .forEach(r => {
         const dep = r.ubicacion?.departamento;
         if (!dep) return;
         if (!porDepartamento.has(dep)) porDepartamento.set(dep, []);
         porDepartamento.get(dep).push(r);
       });
+    const listado = document.querySelector("#atlas-localidades");
+    if (listado) {
+      registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion)).forEach(r => {
+        const boton = document.createElement("button");
+        boton.type = "button";
+        boton.className = "atlas-localidad";
+        const titulo = document.createElement("strong");
+        titulo.textContent = r.titulo;
+        const ubicacion = document.createElement("small");
+        ubicacion.textContent = [r.ubicacion?.municipio, r.ubicacion?.departamento].filter(Boolean).join(", ") + " · Sin verificación independiente";
+        boton.append(titulo, ubicacion);
+        boton.addEventListener("click", () => {
+          document.dispatchEvent(new CustomEvent("geopaleo:abrir-ficha", { detail: { id: r.id } }));
+          document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth" });
+        });
+        listado.appendChild(boton);
+      });
+    }
     porDepartamento.forEach((fichas, dep) => {
       if (!cabeceras[dep]) return;
       const punto = L.circleMarker(cabeceras[dep], {
@@ -112,6 +130,7 @@ fetch("data/catalogo.json")
       const enlace = document.createElement("a");
       enlace.href = "#catalogo";
       enlace.textContent = "Consultar fichas históricas";
+      enlace.addEventListener("click", () => document.dispatchEvent(new CustomEvent("geopaleo:filtrar-departamento", { detail: { departamento: dep } })));
       popup.append(titulo, nota, lista, enlace);
       punto.bindPopup(popup, { maxWidth: 340 });
     });
