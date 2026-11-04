@@ -83,7 +83,13 @@ fetch("data/catalogo.json")
       "Guatemala": [14.6349, -90.5069],
       "Huehuetenango": [15.3197, -91.4708],
       "Jutiapa": [14.2917, -89.8958],
-      "Zacapa": [14.9722, -89.5306]
+      "Zacapa": [14.9722, -89.5306],
+      "Izabal": [15.7300, -88.6000],
+      "Petén": [16.9300, -89.8900],
+      "Baja Verapaz": [15.1000, -90.3200],
+      "Sacatepéquez": [14.5600, -90.7300],
+      "El Progreso": [14.8500, -90.0700],
+      "Chiquimula": [14.8000, -89.5500]
     };
     const porDepartamento = new Map();
     registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion))
@@ -111,6 +117,7 @@ fetch("data/catalogo.json")
         listado.appendChild(boton);
       });
     }
+    // Puntos de orientación aproximados en cabeceras departamentales, nunca en los sitios fósiles.
     porDepartamento.forEach((fichas, dep) => {
       if (!cabeceras[dep]) return;
       const punto = L.circleMarker(cabeceras[dep], {
@@ -122,6 +129,8 @@ fetch("data/catalogo.json")
       const nota = document.createElement("p");
       nota.textContent = "Marcador en cabecera departamental para orientación. NO representa un yacimiento ni las coordenadas de un fósil.";
       const lista = document.createElement("ul");
+      lista.style.maxHeight = "160px";
+      lista.style.overflowY = "auto";
       fichas.forEach(f => {
         const item = document.createElement("li");
         item.textContent = (f.ubicacion?.municipio || "Municipio no indicado") + ": " + f.titulo;

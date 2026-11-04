@@ -382,19 +382,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       const opcion = [...filtros.departamento.options].find(o => normalizar(o.value) === normalizar(dep));
       if (!opcion) return;
       filtros.departamento.value = opcion.value;
+      if (filtros.municipio) filtros.municipio.value = "";
       paginaActual = 1;
       if (desplegable) desplegable.open = true;
-      actualizarMunicipios();
-      renderizar();
-      document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    document.addEventListener("geopaleo:filtrar-departamento", evento => {
-      const departamento = evento.detail?.departamento;
-      if (!departamento || !filtros.departamento) return;
-      const opcion = [...filtros.departamento.options].find(o => normalizar(o.value) === normalizar(departamento));
-      if (!opcion) return;
-      filtros.departamento.value = opcion.value;
-      filtros.municipio.value = "";
       actualizarMunicipios();
       renderizar();
       document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
