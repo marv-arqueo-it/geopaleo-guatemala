@@ -283,7 +283,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       demostrativo: "Demostrativo",
       referencia_historica: "Referencia histórica",
       verificado: "Verificado",
-      pendiente: "Pendiente de verificación"
+      pendiente: "Pendiente de verificación",
+      sin_verificar: "Sin verificar",
+      identificacion_discutida: "Identificación discutida"
     };
     function opciones(select, valores, etiquetas = {}) {
       if (!select) return;
@@ -382,6 +384,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       filtros.departamento.value = opcion.value;
       paginaActual = 1;
       if (desplegable) desplegable.open = true;
+      actualizarMunicipios();
+      renderizar();
+      document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    document.addEventListener("geopaleo:filtrar-departamento", evento => {
+      const departamento = evento.detail?.departamento;
+      if (!departamento || !filtros.departamento) return;
+      const opcion = [...filtros.departamento.options].find(o => normalizar(o.value) === normalizar(departamento));
+      if (!opcion) return;
+      filtros.departamento.value = opcion.value;
+      filtros.municipio.value = "";
       actualizarMunicipios();
       renderizar();
       document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
