@@ -37,7 +37,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   let registrosDisponibles = [];
   document.addEventListener("geopaleo:abrir-ficha", evento => {
     const registro = registrosDisponibles.find(r => r.id === evento.detail?.id);
-    if (registro) abrirFicha(registro);
+    if (registro) {
+      document.querySelector("#catalogo-desplegable")?.setAttribute("open", "");
+      abrirFicha(registro);
+    }
   });
 
   function abrirFicha(registro) {
