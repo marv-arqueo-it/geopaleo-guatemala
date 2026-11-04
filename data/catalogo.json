@@ -509,5 +509,325 @@
       "fechaActualizacion": null,
       "fechaReferenciaHistorica": "1974"
     }
+  },
+  {
+    "id": "GP-HIST-013",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Escuela Forestal Centroamericana",
+    "descripcion": "Restos atribuidos a Eremotherium, rescatados por Gazin e Ibarra según la tesis.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Perezosos gigantes (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Baja Verapaz",
+      "municipio": "Salamá",
+      "descripcionGeneral": "Salamá, Baja Verapaz; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 47 (numeración impresa).",
+          "paginas": "47",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1955"
+    }
+  },
+  {
+    "id": "GP-HIST-014",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Kilómetro 31, carretera CA-1 Occidente",
+    "descripcion": "Hallazgo reportado el 25 de agosto de 1962 de fragmento de maxilar inferior con molar atribuido a mastodonte.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscídeos (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Sacatepéquez",
+      "municipio": "San Lucas Sacatepéquez",
+      "descripcionGeneral": "San Lucas Sacatepéquez, Sacatepéquez; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 47 (numeración impresa).",
+          "paginas": "47",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1962"
+    }
+  },
+  {
+    "id": "GP-HIST-015",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Río Usumacinta, región fronteriza",
+    "descripcion": "La tesis cita hallazgos atribuidos a perezoso gigante y proboscídeo en depósitos pleistocenos de la región Usumacinta.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Megafauna diversa (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Petén",
+      "municipio": "La Libertad",
+      "descripcionGeneral": "La Libertad, Petén; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 48 (numeración impresa).",
+          "paginas": "48",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1962"
+    }
+  },
+  {
+    "id": "GP-HIST-016",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Ciudad Real, Quebrada del Frutal",
+    "descripcion": "Referencia a hallazgos en Ciudad Real, zona 12, Quebrada del Frutal. Se omiten coordenadas parciales y detalles de acceso.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": "Guatemala",
+      "descripcionGeneral": "Guatemala, Guatemala; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 48 (numeración impresa).",
+          "paginas": "48",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1970–1972"
+    }
+  },
+  {
+    "id": "GP-HIST-017",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Finca El Salitre",
+    "descripcion": "Referencia de la segunda fase de la cronología de la tesis, citando un reportaje de Prensa Libre del 11 de julio de 1975.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Jutiapa",
+      "municipio": "Jutiapa",
+      "descripcionGeneral": "Jutiapa, Jutiapa; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 44 (numeración impresa).",
+          "paginas": "44",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1975"
+    }
+  },
+  {
+    "id": "GP-HIST-018",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Barrio La Joya, Estanzuela",
+    "descripcion": "La cronología registra una localidad denominada Barrio La Joya en Estanzuela durante 1977.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Estanzuela, Zacapa; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 44 (numeración impresa).",
+          "paginas": "44",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1977"
+    }
+  },
+  {
+    "id": "GP-HIST-019",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Colonia Tecún Umán, San Pedro Ayampuc",
+    "descripcion": "Referencia de la segunda fase de la tesis a la colonia Tecún Umán, sin publicar número de lote ni ubicación precisa.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": "San Pedro Ayampuc",
+      "descripcionGeneral": "San Pedro Ayampuc, Guatemala; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 45 (numeración impresa).",
+          "paginas": "45",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1977"
+    }
+  },
+  {
+    "id": "GP-HIST-020",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Río La Pasión: húmero de perezoso gigante",
+    "descripcion": "Referencia a un fragmento de húmero de perezoso gigante recuperado por Barnum Brown; las supuestas incisiones humanas son una interpretación discutida en la literatura.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Perezosos gigantes (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Petén",
+      "municipio": "Sayaxché",
+      "descripcionGeneral": "Sayaxché, Petén; ubicación general extraída de la fuente, no coordenadas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, p. 45–46 (numeración impresa).",
+          "paginas": "45–46",
+          "nota": "Referencia secundaria sin verificación independiente; consultar la tesis y las fuentes originales."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1950"
+    }
   }
 ]
