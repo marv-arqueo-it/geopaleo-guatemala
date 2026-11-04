@@ -271,6 +271,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       estado: document.querySelector("#filtro-estado")
     };
     const contador = document.querySelector("#catalogo-contador");
+    const paginacion = document.querySelector("#catalogo-paginacion");
+    const desplegable = document.querySelector("#catalogo-desplegable");
+    const porPagina = 6;
+    let paginaActual = 1;
     const limpiar = document.querySelector("#filtro-limpiar");
     const nombreEstado = {
       demostrativo: "Demostrativo",
@@ -321,15 +325,33 @@ document.addEventListener("DOMContentLoaded", async () => {
           (!filtros.grupo?.value || registro.clasificacion?.grupo === filtros.grupo.value) &&
           (!filtros.estado?.value || registro.estadoVerificacion === filtros.estado.value);
       });
+      const paginas = Math.max(1, Math.ceil(visibles.length / porPagina));
+      paginaActual = Math.min(paginaActual, paginas);
+      const inicio = (paginaActual - 1) * porPagina;
       contenedor.replaceChildren();
-      visibles.forEach(registro => contenedor.appendChild(crearTarjeta(registro)));
+      visibles.slice(inicio, inicio + porPagina).forEach(registro => contenedor.appendChild(crearTarjeta(registro)));
+      if (paginacion) {
+        paginacion.replaceChildren();
+        if (paginas > 1) {
+          const anterior = elemento("button", "Anterior");
+          anterior.type = "button";
+          anterior.disabled = paginaActual === 1;
+          anterior.addEventListener("click", () => { paginaActual--; renderizar(); });
+          const indicador = elemento("span", `Página ${paginaActual} de ${paginas}`);
+          const siguiente = elemento("button", "Siguiente");
+          siguiente.type = "button";
+          siguiente.disabled = paginaActual === paginas;
+          siguiente.addEventListener("click", () => { paginaActual++; renderizar(); });
+          paginacion.append(anterior, indicador, siguiente);
+        }
+      }
       if (!visibles.length) contenedor.appendChild(elemento("p", "No se encontraron registros con estos filtros."));
       if (contador) contador.textContent = `${visibles.length} de ${registros.length} registros`;
     }
-    filtros.departamento?.addEventListener("change", () => { actualizarMunicipios(); renderizar(); });
+    filtros.departamento?.addEventListener("change", () => { paginaActual = 1; actualizarMunicipios(); renderizar(); });
     Object.entries(filtros).filter(([nombre]) => nombre !== "departamento").forEach(([,control]) => {
-      control?.addEventListener("input", renderizar);
-      control?.addEventListener("change", renderizar);
+      control?.addEventListener("input", () => { paginaActual = 1; renderizar(); });
+      control?.addEventListener("change", () => { paginaActual = 1; renderizar(); });
     });
     limpiar?.addEventListener("click", () => {
       Object.values(filtros).forEach(control => { if (control) control.value = ""; });
@@ -355,6 +377,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       const opcion = [...filtros.departamento.options].find(o => normalizar(o.value) === normalizar(dep));
       if (!opcion) return;
       filtros.departamento.value = opcion.value;
+      paginaActual = 1;
+      if (desplegable) desplegable.open = true;
       actualizarMunicipios();
       renderizar();
       document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
