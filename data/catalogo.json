@@ -831,7 +831,7 @@
     }
   },
   {
-    "id": "GP-HIST-035",
+    "id": "GP-HIST-021",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chinautla: noticia de hallazgo de 1947",
     "descripcion": "Noticia histórica de restos atribuidos a mastodonte; puede referirse a un episodio distinto del de 1875–1876.",
@@ -871,7 +871,7 @@
     }
   },
   {
-    "id": "GP-HIST-036",
+    "id": "GP-HIST-022",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: rescates de 1947–1950",
     "descripcion": "La tesis describe trabajos de rescate de megafauna y un gliptodonte en 1950; posible solapamiento con la ficha general de Estanzuela.",
@@ -911,7 +911,7 @@
     }
   },
   {
-    "id": "GP-HIST-037",
+    "id": "GP-HIST-023",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chinautla: mandíbula referida en 1962",
     "descripcion": "La tesis cita una mandíbula atribuida tentativamente a Cuvieronius o Haplomastodon, sin identificación específica confirmada.",
@@ -951,7 +951,7 @@
     }
   },
   {
-    "id": "GP-HIST-038",
+    "id": "GP-HIST-024",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: hallazgo referido en 1962",
     "descripcion": "Rescate de pelvis atribuida a Eremotherium y colmillo de proboscídeo sin identificar.",
@@ -991,7 +991,7 @@
     }
   },
   {
-    "id": "GP-HIST-039",
+    "id": "GP-HIST-025",
     "tipoRegistro": "referencia_historica",
     "titulo": "Río La Pasión: molar atribuido a Mammut",
     "descripcion": "La tesis describe otro ejemplar de la expedición de Barnum Brown: un molar atribuido históricamente a Mammut americanus; debe distinguirse del húmero.",
@@ -1031,7 +1031,7 @@
     }
   },
   {
-    "id": "GP-HIST-040",
+    "id": "GP-HIST-026",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chivacabé: mastodonte de Villatoro",
     "descripcion": "Hallazgo de 1976 y campañas posteriores de 1977, 1978, 1992 y 2008. La tesis señala que la asociación de los fósiles con actividad humana no quedó demostrada; se unifica en una ficha histórica.",
@@ -1071,7 +1071,7 @@
     }
   },
   {
-    "id": "GP-HIST-041",
+    "id": "GP-HIST-027",
     "tipoRegistro": "referencia_historica",
     "titulo": "Agencia Guatel, zona 7",
     "descripcion": "Noticia de hallazgo al excavar un pozo, sin ubicación exacta del depósito.",
@@ -1111,7 +1111,7 @@
     }
   },
   {
-    "id": "GP-HIST-042",
+    "id": "GP-HIST-028",
     "tipoRegistro": "referencia_historica",
     "titulo": "Quebrada Pacoy, Chiticoy",
     "descripcion": "Rescate de fósiles de proboscídeo referido por IDAEH en la aldea Chiticoy.",
@@ -1151,7 +1151,7 @@
     }
   },
   {
-    "id": "GP-HIST-043",
+    "id": "GP-HIST-029",
     "tipoRegistro": "referencia_historica",
     "titulo": "Malacatancito: referencia Fausto Guzmán",
     "descripcion": "Restos atribuidos a mastodonte en una propiedad del municipio; se omiten detalles de acceso.",
@@ -1191,7 +1191,7 @@
     }
   },
   {
-    "id": "GP-HIST-044",
+    "id": "GP-HIST-030",
     "tipoRegistro": "referencia_historica",
     "titulo": "El Rosario, Ipala",
     "descripcion": "Rescate de restos atribuidos a proboscídeos; la tesis indica que no se localizaron materiales arqueológicos asociados.",
@@ -1231,7 +1231,7 @@
     }
   },
   {
-    "id": "GP-HIST-045",
+    "id": "GP-HIST-031",
     "tipoRegistro": "referencia_historica",
     "titulo": "Songotongo",
     "descripcion": "Referencia a huesos largos y costillas de identificación incierta; sin evidencia concluyente de asociación cultural.",
@@ -1271,7 +1271,7 @@
     }
   },
   {
-    "id": "GP-HIST-046",
+    "id": "GP-HIST-032",
     "tipoRegistro": "referencia_historica",
     "titulo": "Finca La Providencia",
     "descripcion": "Depósito fosilífero con restos atribuidos a gliptodonte en trabajos del Programa de Arqueología del Motagua Medio.",
@@ -1311,7 +1311,7 @@
     }
   },
   {
-    "id": "GP-HIST-047",
+    "id": "GP-HIST-033",
     "tipoRegistro": "referencia_historica",
     "titulo": "Cerro de la Virgen / Cerro Alux",
     "descripcion": "Referencia a un molar atribuido históricamente a mastodonte; la tesis indica que la ubicación exacta no fue reportada.",
