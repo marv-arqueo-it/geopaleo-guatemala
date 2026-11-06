@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     const resumen = document.querySelector("#atlas-resumen");
     if (resumen) {
-      const historicas = registros.filter(r => r.estadoVerificacion === "referencia_historica").length;
+      const historicas = registros.filter(r => ["referencia_historica", "sin_verificar", "identificacion_discutida"].includes(r.estadoVerificacion)).length;
       const verificadas = registros.filter(r => r.estadoVerificacion === "verificado").length;
       const demo = registros.filter(r => r.estadoVerificacion === "demostrativo").length;
       for (const [numero, etiqueta] of [[registros.length, "Fichas del catálogo"], [historicas, "Referencias históricas"], [verificadas, "Hallazgos verificados"], [demo, "Fichas demostrativas"]]) {

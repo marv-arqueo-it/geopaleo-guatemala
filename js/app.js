@@ -90,7 +90,10 @@ fetch("data/catalogo.json")
       "Sacatepéquez": [14.5600, -90.7300],
       "El Progreso": [14.8500, -90.0700],
       "Chiquimula": [14.8000, -89.5500],
-      "Quetzaltenango": [14.8347, -91.5181]
+      "Quetzaltenango": [14.8347, -91.5181],
+      "Jalapa": [14.634, -89.989],
+      "Santa Rosa": [14.277, -90.299],
+      "Quiché": [15.031, -91.148]
     };
     const porDepartamento = new Map();
     registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion))
