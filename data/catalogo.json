@@ -1351,7 +1351,7 @@
     }
   },
   {
-    "id": "GP-HIST-048",
+    "id": "GP-HIST-034",
     "tipoRegistro": "referencia_historica",
     "titulo": "Aldea Tontol",
     "descripcion": "Denuncia en 2005 e investigación en 2010 de restos atribuidos tentativamente a proboscídeo; no se publican detalles de acceso.",
@@ -1391,7 +1391,7 @@
     }
   },
   {
-    "id": "GP-HIST-049",
+    "id": "GP-HIST-035",
     "tipoRegistro": "referencia_historica",
     "titulo": "Oratorio: Roca Madariaga",
     "descripcion": "Referencia a un fragmento fósil recuperado en superficie y entregado al IDAEH.",
@@ -1431,7 +1431,7 @@
     }
   },
   {
-    "id": "GP-HIST-050",
+    "id": "GP-HIST-036",
     "tipoRegistro": "referencia_historica",
     "titulo": "Aldea San Rafaelito",
     "descripcion": "Fragmentos atribuidos a mastodonte recuperados durante obras locales, según reporte de Demopre-IDAEH.",
@@ -1471,7 +1471,7 @@
     }
   },
   {
-    "id": "GP-HIST-051",
+    "id": "GP-HIST-037",
     "tipoRegistro": "referencia_historica",
     "titulo": "Río Canbalám, Barillas",
     "descripcion": "La tesis refiere recolección alrededor de 1987 y seguimiento institucional en 2008; el lugar exacto no está documentado.",
@@ -1511,7 +1511,7 @@
     }
   },
   {
-    "id": "GP-HIST-052",
+    "id": "GP-HIST-038",
     "tipoRegistro": "referencia_historica",
     "titulo": "Los Vados, Labor Vieja",
     "descripcion": "Referencia a fragmentos fósiles de gran tamaño recuperados durante una excavación doméstica; sin diagnóstico taxonómico definitivo.",
@@ -1551,7 +1551,7 @@
     }
   },
   {
-    "id": "GP-HIST-053",
+    "id": "GP-HIST-039",
     "tipoRegistro": "referencia_historica",
     "titulo": "Finca El Recuerdo, Jalpatagua",
     "descripcion": "Dos fragmentos fósiles de megafauna entregados a la Escuela de Historia USAC; atribución específica no confirmada.",
@@ -1591,7 +1591,7 @@
     }
   },
   {
-    "id": "GP-HIST-054",
+    "id": "GP-HIST-040",
     "tipoRegistro": "referencia_historica",
     "titulo": "Finca Roca Linda",
     "descripcion": "Posible hallazgo de Equus; la tesis advierte que dos menciones podrían corresponder al mismo ejemplar.",
@@ -1631,7 +1631,7 @@
     }
   },
   {
-    "id": "GP-HIST-055",
+    "id": "GP-HIST-041",
     "tipoRegistro": "referencia_historica",
     "titulo": "Río Salinas, frontera con México",
     "descripcion": "Referencia a un fragmento atribuido a Eremotherium; municipio y ubicación exacta desconocidos.",
@@ -1671,7 +1671,7 @@
     }
   },
   {
-    "id": "GP-HIST-056",
+    "id": "GP-HIST-042",
     "tipoRegistro": "referencia_historica",
     "titulo": "Jutiapa: molar sin localidad",
     "descripcion": "Molar atribuido históricamente a Mammuthus columbi; no consta localidad precisa.",
@@ -1711,7 +1711,7 @@
     }
   },
   {
-    "id": "GP-HIST-057",
+    "id": "GP-HIST-043",
     "tipoRegistro": "referencia_historica",
     "titulo": "Antigua Guatemala: referencia de 1865",
     "descripcion": "Referencia histórica de restos atribuidos a mastodonte, sin lugar exacto.",
@@ -1751,7 +1751,7 @@
     }
   },
   {
-    "id": "GP-HIST-058",
+    "id": "GP-HIST-044",
     "tipoRegistro": "referencia_historica",
     "titulo": "Tívoli, zona 9",
     "descripcion": "Referencia a restos atribuidos a gliptodonte y proboscídeos, sin ubicación exacta del hallazgo.",
@@ -1791,7 +1791,7 @@
     }
   },
   {
-    "id": "GP-HIST-059",
+    "id": "GP-HIST-045",
     "tipoRegistro": "referencia_historica",
     "titulo": "Ciudad de Guatemala: hallazgo en zona Viva",
     "descripcion": "Noticia de restos óseos posiblemente de mamut durante obras; la tesis no identifica el inmueble ni confirma taxonomía.",
@@ -1831,7 +1831,7 @@
     }
   },
   {
-    "id": "GP-HIST-060",
+    "id": "GP-HIST-046",
     "tipoRegistro": "referencia_historica",
     "titulo": "Sacapulas: referencia Demeterio Pérez",
     "descripcion": "Referencia a restos atribuidos a Eremotherium, sin localización exacta.",
@@ -1871,7 +1871,7 @@
     }
   },
   {
-    "id": "GP-HIST-061",
+    "id": "GP-HIST-047",
     "tipoRegistro": "referencia_historica",
     "titulo": "Sacapulas: dos proboscídeos",
     "descripcion": "Nota histórica sobre dos proboscídeos fósiles cerca de Sacapulas; no se confirma relación con el registro de 1971.",
@@ -1911,7 +1911,7 @@
     }
   },
   {
-    "id": "GP-HIST-062",
+    "id": "GP-HIST-048",
     "tipoRegistro": "referencia_historica",
     "titulo": "Jutiapa: molar referido por Ibarra",
     "descripcion": "Referencia a un molar de mamut cerca de la cabecera; podría solaparse con otro registro incompleto de Jutiapa.",
@@ -1951,7 +1951,7 @@
     }
   },
   {
-    "id": "GP-HIST-063",
+    "id": "GP-HIST-049",
     "tipoRegistro": "referencia_historica",
     "titulo": "Río Hondo: sitio Leidy",
     "descripcion": "Restos atribuidos históricamente a équido y mastodonte, sin sitio exacto.",
@@ -1991,7 +1991,7 @@
     }
   },
   {
-    "id": "GP-HIST-064",
+    "id": "GP-HIST-050",
     "tipoRegistro": "referencia_historica",
     "titulo": "Barrio La Reforma: maxilar",
     "descripcion": "Referencia a un maxilar de mastodonte en barrio La Reforma, Zacapa; la tabla y el relato no coinciden en la jurisdicción municipal.",
@@ -2031,7 +2031,7 @@
     }
   },
   {
-    "id": "GP-HIST-065",
+    "id": "GP-HIST-051",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: rescate de gliptodonte",
     "descripcion": "Rescate de caparazón y otros restos atribuidos a gliptodonte, sin localización exacta.",
@@ -2071,7 +2071,7 @@
     }
   },
   {
-    "id": "GP-HIST-066",
+    "id": "GP-HIST-052",
     "tipoRegistro": "referencia_historica",
     "titulo": "Presa Santa Rosalía, Cabañas",
     "descripcion": "Referencia a un posible esqueleto de proboscídeo afectado por obras de canal; sin evidencia conservada confirmada.",
@@ -2111,7 +2111,7 @@
     }
   },
   {
-    "id": "GP-HIST-067",
+    "id": "GP-HIST-053",
     "tipoRegistro": "referencia_historica",
     "titulo": "Río La Pasión: molar Arturo Arbizú",
     "descripcion": "Molar atribuido históricamente a mamut, recuperado por Arturo Arbizú; distinto de los registros de 1950.",
@@ -2151,7 +2151,7 @@
     }
   },
   {
-    "id": "GP-HIST-068",
+    "id": "GP-HIST-054",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: Calle Portillo",
     "descripcion": "Referencia a restos atribuidos a Eremotherium, sin lugar exacto.",
@@ -2191,7 +2191,7 @@
     }
   },
   {
-    "id": "GP-HIST-069",
+    "id": "GP-HIST-055",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: sitio Planchas S",
     "descripcion": "Referencia a restos atribuidos a mamut en sitio Planchas S, sin localización exacta.",
@@ -2231,7 +2231,7 @@
     }
   },
   {
-    "id": "GP-HIST-070",
+    "id": "GP-HIST-056",
     "tipoRegistro": "referencia_historica",
     "titulo": "El Mirador: referencia fósil",
     "descripcion": "La tabla señala 1977 y el texto 1978 para restos atribuidos a mastodonte y Equus; fecha discutida.",
@@ -2271,7 +2271,7 @@
     }
   },
   {
-    "id": "GP-HIST-071",
+    "id": "GP-HIST-057",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: Calzada Mastodonte",
     "descripcion": "Mención de sitio Calzada Mastodonte sin ubicación exacta ni detalle taxonómico en la tabla.",
@@ -2311,7 +2311,7 @@
     }
   },
   {
-    "id": "GP-HIST-072",
+    "id": "GP-HIST-058",
     "tipoRegistro": "referencia_historica",
     "titulo": "Río Hondo: proboscídeo sin localidad",
     "descripcion": "Referencia a rescate de restos de proboscídeo, sin lugar exacto.",
@@ -2351,7 +2351,7 @@
     }
   },
   {
-    "id": "GP-HIST-073",
+    "id": "GP-HIST-059",
     "tipoRegistro": "referencia_historica",
     "titulo": "La Reforma: maxilar de 1980",
     "descripcion": "Referencia a maxilar atribuido a mastodonte en La Reforma; jurisdicción municipal no aclarada en esta ficha.",
@@ -2391,7 +2391,7 @@
     }
   },
   {
-    "id": "GP-HIST-074",
+    "id": "GP-HIST-060",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: contiguo al sitio 2",
     "descripcion": "Referencia a restos atribuidos a mastodonte en las inmediaciones del sitio n.º 2.",
@@ -2431,7 +2431,7 @@
     }
   },
   {
-    "id": "GP-HIST-075",
+    "id": "GP-HIST-061",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: sector P, sitio 2",
     "descripcion": "Referencia a restos atribuidos a mastodonte en sector P del sitio n.º 2.",
@@ -2471,7 +2471,7 @@
     }
   },
   {
-    "id": "GP-HIST-076",
+    "id": "GP-HIST-062",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: sitio Toya",
     "descripcion": "Referencia a restos atribuidos a gliptodonte en sitio Toya.",
@@ -2511,7 +2511,7 @@
     }
   },
   {
-    "id": "GP-HIST-077",
+    "id": "GP-HIST-063",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: sitio Santa Marta Pr",
     "descripcion": "Referencia a restos atribuidos a mastodonte en sitio Santa Marta Pr.",
