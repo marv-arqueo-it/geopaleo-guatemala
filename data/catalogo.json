@@ -2549,5 +2549,525 @@
       "fechaActualizacion": null,
       "fechaReferenciaHistorica": "1989"
     }
+  },
+  {
+    "id": "GP-HIST-064",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio Marcos Pinto (campaña 1971)",
+    "descripcion": "La tesis describe excavaciones en el sitio Marcos Pinto (sitio n.º 5, punto 50), con restos de proboscídeo atribuidos históricamente a Cuvieronius hyodon. Incluye referencias a vértebras, costillas, pelvis y un esqueleto reconstruido.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscídeos (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 50–51 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "50–51",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1971"
+    }
+  },
+  {
+    "id": "GP-HIST-065",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: María Navas viuda de Cabrera",
+    "descripcion": "La tesis menciona metatarsianos atribuidos a Equus durante la campaña de 1971.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Équidos (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 50 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "50",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1971"
+    }
+  },
+  {
+    "id": "GP-HIST-066",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: María del Tránsito Suárez",
+    "descripcion": "La tesis refiere el hallazgo de un cráneo atribuido históricamente a Neochoerus, identificado en septiembre de 1971 según el texto.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Roedores gigantes (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 51 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "51",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1971"
+    }
+  },
+  {
+    "id": "GP-HIST-067",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio Víctor M. Casasola",
+    "descripcion": "La tesis registra fragmentos de caparazón y otros elementos atribuidos a Glyptotherium en el sitio n.º 8.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Gliptodontes (atribución histórica)",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 51 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "51",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1971"
+    }
+  },
+  {
+    "id": "GP-HIST-068",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio Zoila Vidalina Fajardo",
+    "descripcion": "La tesis registra excavaciones en el sitio n.º 17 durante la campaña paleontológica de 1971, sin atribución taxonómica individual confirmada en esta ficha.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 50 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "50",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1971"
+    }
+  },
+  {
+    "id": "GP-HIST-069",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio Roderico Casasola",
+    "descripcion": "La tesis registra excavaciones en el sitio n.º 2 durante la campaña paleontológica de 1971.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 50 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "50",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1971"
+    }
+  },
+  {
+    "id": "GP-HIST-070",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio Los Yajes I",
+    "descripcion": "Referencia en el cuadro de la segunda fase a Los Yajes I, citando a Woolfolk (1994).",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 43 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "43",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1973"
+    }
+  },
+  {
+    "id": "GP-HIST-071",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Ciudad Real: Escuela Bran Azmitia",
+    "descripcion": "El cuadro de la segunda fase consigna una referencia paleontológica en la Escuela Bran Azmitia, sector Ciudad Real, zona 12.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Guatemala",
+      "municipio": "Guatemala",
+      "descripcionGeneral": "Referencia histórica de Guatemala, Guatemala; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 44 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "44",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1975"
+    }
+  },
+  {
+    "id": "GP-HIST-072",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Quetzaltenango: referencia urbana de 1975",
+    "descripcion": "Referencia histórica de la segunda fase a un hallazgo en el área urbana de Quetzaltenango. Se omite la dirección residencial detallada consignada en la fuente.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Quetzaltenango",
+      "municipio": "Quetzaltenango",
+      "descripcionGeneral": "Referencia histórica de Quetzaltenango, Quetzaltenango; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 44 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "44",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1975"
+    }
+  },
+  {
+    "id": "GP-HIST-073",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio n.º 65 (campaña 1977)",
+    "descripcion": "El cuadro de la segunda fase recoge múltiples anotaciones del diario de excavación sobre el sitio n.º 65; se consolidan como una sola ficha de localidad para evitar duplicados.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 44–45 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "44–45",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1977"
+    }
+  },
+  {
+    "id": "GP-HIST-074",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio n.º 61 (campaña 1977)",
+    "descripcion": "Referencia del diario de excavación al sitio n.º 61 en Estanzuela.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 44 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "44",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1977"
+    }
+  },
+  {
+    "id": "GP-HIST-075",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitio n.º 66 (campaña 1977)",
+    "descripcion": "Referencia del diario de excavación al sitio n.º 66 en Estanzuela.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 44 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "44",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1977"
+    }
+  },
+  {
+    "id": "GP-HIST-076",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Estanzuela: sitios n.º 68–70 (campaña 1977)",
+    "descripcion": "El cuadro de la tesis registra por separado los sitios n.º 68, 69 y 70. Esta ficha los agrupa provisionalmente como conjunto documental, sin afirmar que sean un solo yacimiento.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "No determinado en esta referencia",
+      "taxon": null,
+      "periodoGeologico": "No confirmado para este registro",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Zacapa",
+      "municipio": "Estanzuela",
+      "descripcionGeneral": "Referencia histórica de Estanzuela, Zacapa; sin coordenadas públicas de yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "no_disponible",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Monografía histórica sobre descubrimientos de megafauna del Pleistoceno final en territorio guatemalteco, período de 1690 a 2010",
+          "autores": "Manuel de Jesús Colón Morales",
+          "anio": 2015,
+          "cita": "USAC, capítulo IV, pp. 44–45 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
+          "paginas": "44–45",
+          "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "USAC (tesis, 2015)",
+      "responsableRevision": null,
+      "fechaActualizacion": null,
+      "fechaReferenciaHistorica": "1977"
+    }
   }
 ]
