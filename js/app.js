@@ -89,7 +89,8 @@ fetch("data/catalogo.json")
       "Baja Verapaz": [15.1000, -90.3200],
       "Sacatepéquez": [14.5600, -90.7300],
       "El Progreso": [14.8500, -90.0700],
-      "Chiquimula": [14.8000, -89.5500]
+      "Chiquimula": [14.8000, -89.5500],
+      "Quetzaltenango": [14.8347, -91.5181]
     };
     const porDepartamento = new Map();
     registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion))
@@ -101,21 +102,50 @@ fetch("data/catalogo.json")
       });
     const listado = document.querySelector("#atlas-localidades");
     if (listado) {
-      registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion)).forEach(r => {
-        const boton = document.createElement("button");
-        boton.type = "button";
-        boton.className = "atlas-localidad";
-        const titulo = document.createElement("strong");
-        titulo.textContent = r.titulo;
-        const ubicacion = document.createElement("small");
-        ubicacion.textContent = [r.ubicacion?.municipio, r.ubicacion?.departamento].filter(Boolean).join(", ") + " · Sin verificación independiente";
-        boton.append(titulo, ubicacion);
-        boton.addEventListener("click", () => {
-          document.dispatchEvent(new CustomEvent("geopaleo:abrir-ficha", { detail: { id: r.id } }));
-          document.querySelector("#catalogo")?.scrollIntoView({ behavior: "smooth" });
+      const registrosHistoricos = registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion));
+      const encabezado = document.createElement("div");
+      encabezado.className = "atlas-listado-controles";
+      const buscar = document.createElement("input");
+      buscar.type = "search";
+      buscar.placeholder = "Buscar localidad o departamento...";
+      buscar.setAttribute("aria-label", "Buscar localidades históricas");
+      const contador = document.createElement("small");
+      const resultados = document.createElement("div");
+      resultados.className = "atlas-listado-resultados";
+      const limite = 8;
+      let visibles = limite;
+      function pintarLocalidades() {
+        const termino = buscar.value.trim().toLocaleLowerCase("es");
+        const coinciden = registrosHistoricos.filter(r => [r.titulo, r.ubicacion?.departamento, r.ubicacion?.municipio].some(v => String(v || "").toLocaleLowerCase("es").includes(termino)));
+        contador.textContent = `${coinciden.length} localidades coincidentes`;
+        resultados.replaceChildren();
+        coinciden.slice(0, visibles).forEach(r => {
+          const boton = document.createElement("button");
+          boton.type = "button";
+          boton.className = "atlas-localidad";
+          const titulo = document.createElement("strong");
+          titulo.textContent = r.titulo;
+          const ubicacion = document.createElement("small");
+          ubicacion.textContent = [r.ubicacion?.municipio, r.ubicacion?.departamento].filter(Boolean).join(", ") + " · Sin verificación independiente";
+          boton.append(titulo, ubicacion);
+          boton.addEventListener("click", () => {
+            document.dispatchEvent(new CustomEvent("geopaleo:abrir-ficha", { detail: { id: r.id } }));
+          });
+          resultados.appendChild(boton);
         });
-        listado.appendChild(boton);
-      });
+        if (coinciden.length > visibles) {
+          const mas = document.createElement("button");
+          mas.type = "button";
+          mas.className = "atlas-mas-localidades";
+          mas.textContent = "Ver más localidades";
+          mas.addEventListener("click", () => { visibles += limite; pintarLocalidades(); });
+          resultados.appendChild(mas);
+        }
+      }
+      buscar.addEventListener("input", () => { visibles = limite; pintarLocalidades(); });
+      encabezado.append(buscar, contador);
+      listado.replaceChildren(encabezado, resultados);
+      pintarLocalidades();
     }
     // Puntos de orientación aproximados en cabeceras departamentales, nunca en los sitios fósiles.
     porDepartamento.forEach((fichas, dep) => {
