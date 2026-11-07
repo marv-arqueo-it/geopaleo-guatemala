@@ -1,0 +1,20 @@
+name: Validar GeoPaleo
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  catalogo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar registros y coordenadas públicas
+        run: python scripts/validar_catalogo.py
+      - name: Comprobar sintaxis JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/catalogo.js
+          node --check js/distribucion.js

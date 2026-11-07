@@ -360,6 +360,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     limpiar?.addEventListener("click", () => {
       Object.values(filtros).forEach(control => { if (control) control.value = ""; });
+      paginaActual = 1;
       actualizarMunicipios();
       renderizar();
     });
