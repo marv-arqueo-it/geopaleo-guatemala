@@ -35,7 +35,7 @@ class GeoPaleoTests(unittest.TestCase):
                            "catalogo-registros", "catalogo-paginacion",
                            "catalogo-modal", "atlas-resumen", "filtro-departamento"]:
             with self.subTest(element_id=element_id):
-                self.assertRegex(HTML, r'id=["\\']' + re.escape(element_id) + r'["\\']')
+                self.assertIn('id="' + element_id + '"', HTML)
 
     def test_scripts_incluidos(self):
         for script in ["js/app.js", "js/catalogo.js", "js/distribucion.js"]:
