@@ -154,7 +154,7 @@
     "id": "GP-HIST-004",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chinautla: referencias de megafauna",
-    "descripcion": "La monografía recopila referencias de 1875-1876 a fragmentos atribuidos a perezoso gigante, proboscídeo y caballo americano. La ubicación precisa no está documentada.",
+    "descripcion": "La monografía recopila referencias de 1875-1876 a fragmentos atribuidos a perezoso gigante, proboscídeo y caballo americano. La ubicación precisa no está documentada. Advertencia taxonómica: Lucas et al. (2022) revisan el holotipo históricamente denominado «Serridentinus guatemalensis» de Chinautla y lo interpretan como Gomphotherium de probable Mioceno tardío. Esta revisión no se atribuye automáticamente a todos los hallazgos de Chinautla de 1875–1876 ni a las noticias de 1947 y 1962.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "Megafauna diversa (atribuciones históricas)",
@@ -180,6 +180,14 @@
           "cita": "Tesis de licenciatura, Escuela de Historia, Universidad de San Carlos de Guatemala. Capítulo IV, pp. 38, 41.",
           "paginas": "38, 41",
           "nota": "Fuente secundaria histórica; requiere corroboración con fuentes primarias y revisión taxonómica."
+        },
+        {
+          "titulo": "The fossil vertebrates of Guatemala",
+          "autores": "Spencer G. Lucas, Jorge E. Romero, Osmín J. Vásquez y Guillermo E. Alvarado",
+          "anio": 2022,
+          "cita": "Revista Geológica de América Central 66:1–32, resumen, pp. 1–2. DOI 10.15517/rgac.v66i0.48590.",
+          "paginas": "1–2",
+          "nota": "Revisión del holotipo de Serridentinus guatemalensis: Gomphotherium, probable Mioceno tardío. No confundir con otras menciones históricas de Chinautla."
         }
       ]
     },
@@ -1034,13 +1042,13 @@
     "id": "GP-HIST-026",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chivacabé: mastodonte de Villatoro",
-    "descripcion": "Hallazgo de 1976 y campañas posteriores de 1977, 1978, 1992 y 2008. La tesis señala que la asociación de los fósiles con actividad humana no quedó demostrada; se unifica en una ficha histórica.",
+    "descripcion": "Hallazgo de 1976 y campañas posteriores de 1977, 1978, 1992 y 2008. La tesis señala que la asociación de los fósiles con actividad humana no quedó demostrada; se unifica en una ficha histórica. La revisión de Mead et al. (2012) documenta Glyptotherium sp., Cuvieronius cf. C. hyodon, Equus sp. y Odocoileus cf. O. virginianus, con edades de 15,700–12,920 años calendario antes del presente. Ese estudio no encontró respaldo en fósiles archivados para antiguas atribuciones de pecarí y Eremotherium ni evidencia de modificación humana de los especímenes examinados. Estas conclusiones corresponden al conjunto estudiado, no a todos los posibles hallazgos del área.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
-      "grupo": "No confirmado para este registro",
-      "taxon": null,
-      "periodoGeologico": "No confirmado para este registro",
-      "antiguedadEstimada": null
+      "grupo": "Mamíferos pleistocénicos documentados (Mead et al., 2012)",
+      "taxon": "Glyptotherium sp.; Cuvieronius cf. C. hyodon; Equus sp.; Odocoileus cf. O. virginianus",
+      "periodoGeologico": "Pleistoceno tardío (conjunto estudiado)",
+      "antiguedadEstimada": "15,700–12,920 años calendario antes del presente (fauna estudiada; Mead et al., 2012)"
     },
     "ubicacion": {
       "departamento": "Huehuetenango",
@@ -1060,6 +1068,14 @@
           "cita": "USAC, capítulo IV, tercera fase, pp. 64–67, 69–70, 75–76 (numeración impresa).",
           "paginas": "64–67, 69–70, 75–76",
           "nota": "Fuente secundaria. Revisar el documento original, las identificaciones y posibles duplicados antes de validar científicamente."
+        },
+        {
+          "titulo": "Late Pleistocene mammals from Chivacabé, Huehuetenango, Guatemala",
+          "autores": "Jim I. Mead, Arturo Baez, Sandra L. Swift, Jon Lohse y Lorena Paiz",
+          "anio": 2012,
+          "cita": "Revista Mexicana de Ciencias Geológicas 29(2):319–329, resumen, pp. 319–320.",
+          "paginas": "319–320",
+          "nota": "Estudio paleontológico especializado: identificaciones y dataciones para el conjunto examinado. No respalda antiguas inferencias de intervención humana ni algunos taxones atribuidos."
         }
       ]
     },
@@ -3068,6 +3084,46 @@
       "responsableRevision": null,
       "fechaActualizacion": null,
       "fechaReferenciaHistorica": "1977"
+    }
+  },
+  {
+    "id": "GP-HIST-078",
+    "tipoRegistro": "referencia_historica",
+    "titulo": "Chahal: mandíbula de Cuvieronius",
+    "descripcion": "Lucas, Requena y Alvarado (2016) describen una mandíbula inferior de proboscídeo atribuida a Cuvieronius hyodon, procedente de depósitos aluviales del Pleistoceno cercanos a Chahal, Alta Verapaz. El trabajo menciona el hallazgo de 2016 y su contexto geológico. La ficha presenta solamente la localización administrativa general; no reproduce el mapa detallado del artículo ni las coordenadas del lugar.",
+    "estadoVerificacion": "referencia_historica",
+    "clasificacion": {
+      "grupo": "Proboscidea",
+      "taxon": "Cuvieronius hyodon (identificación publicada en Lucas et al., 2016)",
+      "periodoGeologico": "Pleistoceno (atribución de la publicación)",
+      "antiguedadEstimada": null
+    },
+    "ubicacion": {
+      "departamento": "Alta Verapaz",
+      "municipio": "Chahal",
+      "descripcionGeneral": "Municipio de Chahal, Alta Verapaz. Sin coordenadas públicas del yacimiento.",
+      "coordenadasPublicas": null,
+      "precision": "municipio",
+      "publicacionAutorizada": false
+    },
+    "documentacion": {
+      "imagenes": [],
+      "referencias": [
+        {
+          "titulo": "Cuvieronius (Mammalia, Proboscidea) del Pleistoceno de Chahal, Guatemala",
+          "autores": "Spencer G. Lucas, Jaime F. Requena y Guillermo E. Alvarado",
+          "anio": 2016,
+          "cita": "Revista Guatemalteca de Ciencias de la Tierra, volumen 3, número 1, pp. 67–69 (resumen y descripción del hallazgo).",
+          "paginas": "67–69",
+          "nota": "Fuente paleontológica especializada. Coordenadas y cartografía detallada omitidas para proteger el sitio."
+        }
+      ]
+    },
+    "control": {
+      "institucionFuente": "Revista Guatemalteca de Ciencias de la Tierra (2016)",
+      "responsableRevision": null,
+      "fechaActualizacion": "2026-11-07",
+      "fechaReferenciaHistorica": "2016"
     }
   }
 ]
