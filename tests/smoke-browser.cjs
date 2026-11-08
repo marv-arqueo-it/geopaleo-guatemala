@@ -10,7 +10,17 @@ const assert = require('node:assert/strict');
     const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
     const errors = [];
     page.on('pageerror', err => errors.push(err.message));
-    await page.goto('http://127.0.0.1:8765/', { waitUntil: 'domcontentloaded' });
+    let ready = false;
+    for (let attempt = 0; attempt < 15; attempt++) {
+      try {
+        await page.goto('http://127.0.0.1:8765/', { waitUntil: 'domcontentloaded', timeout: 3000 });
+        ready = true;
+        break;
+      } catch (error) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    }
+    assert.equal(ready, true, 'El servidor local no inició a tiempo');
     await page.locator('#catalogo-contador').filter({ hasText: new RegExp(`${expectedCount} de ${expectedCount} registros`) }).waitFor({ timeout: 20000 });
     assert.equal(await page.locator('#catalogo-desplegable').evaluate(e => e.open), false, 'El catálogo debe iniciar plegado');
     await page.locator('#catalogo-desplegable summary').click();
