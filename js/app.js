@@ -119,7 +119,7 @@ fetch("data/catalogo.json")
       const limite = 8;
       let visibles = limite;
       function pintarLocalidades() {
-        const normalizar = valor => String(valor || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("es");
+        const normalizar = valor => String(valor || "").normalize("NFD").replace(/\p{M}/gu, "").toLocaleLowerCase("es");
         const termino = normalizar(buscar.value.trim());
         const coinciden = registrosHistoricos.filter(r => [r.titulo, r.ubicacion?.departamento, r.ubicacion?.municipio].some(v => normalizar(v).includes(termino)));
         contador.textContent = `${coinciden.length} localidades coincidentes`;
