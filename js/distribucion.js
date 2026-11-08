@@ -66,7 +66,7 @@
     }
 
     const conteos = new Map();
-    registros.filter(r => r.estadoVerificacion === "referencia_historica").forEach(r => {
+    registros.filter(r => ["referencia_historica", "sin_verificar", "identificacion_discutida"].includes(r.estadoVerificacion)).forEach(r => {
       const dep = normalizar(r.ubicacion?.departamento);
       if (dep) conteos.set(dep, (conteos.get(dep) || 0) + 1);
     });
@@ -95,7 +95,7 @@
             const selector = document.querySelector("#filtro-departamento");
             if (selector) {
               const opcion = [...selector.options].find(o => normalizar(o.value) === normalizar(nombre));
-              if (opcion) { selector.value = opcion.value; selector.dispatchEvent(new Event("change")); }
+              if (opcion) { selector.value = opcion.value; selector.dispatchEvent(new Event("change")); document.querySelector("#catalogo-desplegable")?.setAttribute("open", ""); }
             }
           });
           bloque.appendChild(enlace);
