@@ -23,20 +23,20 @@ jobs:
           node --check js/distribucion.js
   navegador:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    # Chromium y dependencias preinstalados sobre Ubuntu 24.04 (Noble).
+    # Evita depender de la versión del SO del runner (p. ej. Ubuntu 26.04).
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Instalar Chromium para Playwright
+      - name: Instalar la biblioteca Playwright de la misma versión
+        run: npm install --no-save playwright@1.56.1
+      - name: Comprobar versión de Node y navegador
         run: |
-          npm install --no-save playwright@1.56.1
-          npx playwright install --with-deps chromium
+          node --version
+          node -e "const {chromium}=require('playwright'); console.log('Chromium:', chromium.executablePath())"
       - name: Probar escritorio y móvil
         run: |
-          python -m http.server 8765 --bind 127.0.0.1 > /tmp/geopaleo-http.log 2>&1 &
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/geopaleo-http.log 2>&1 &
           node tests/smoke-browser.cjs
