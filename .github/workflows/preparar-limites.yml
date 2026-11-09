@@ -1,0 +1,32 @@
+name: Preparar límites departamentales
+on:
+  workflow_dispatch:
+jobs:
+  descargar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Descargar y validar límites ADM1
+        run: python scripts/actualizar_departamentos.py
+      - name: Validar GeoJSON y atributos
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/guatemala-departamentos.geojson')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          features = data['features']
+          assert len(features) == 22
+          names = [f['properties'].get('shapeName') for f in features]
+          assert len(set(names)) == 22
+          assert all(f['geometry']['type'] in ('Polygon','MultiPolygon') for f in features)
+          print('Validado: 22 departamentos con nombres únicos')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guatemala-departamentos-geojson-revisar-licencia
+          path: data/guatemala-departamentos.geojson
+          retention-days: 14

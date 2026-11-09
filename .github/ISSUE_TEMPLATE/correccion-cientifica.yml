@@ -1,0 +1,43 @@
+name: Corrección de datos paleontológicos
+description: Proponer corrección bibliográfica o científica sin divulgar coordenadas sensibles
+title: "[Corrección] "
+labels: ["revisión editorial"]
+body:
+  - type: markdown
+    attributes:
+      value: "Gracias por contribuir. No incluyas coordenadas exactas, direcciones privadas ni datos de acceso a yacimientos."
+  - type: input
+    id: registro
+    attributes:
+      label: Código de ficha
+      description: "Por ejemplo GP-HIST-026"
+      placeholder: GP-HIST-026
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de corrección
+      options:
+        - Taxonomía
+        - Bibliografía
+        - Cronología o geología
+        - Departamento o municipio general
+        - Registro duplicado
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: detalle
+    attributes:
+      label: Descripción y propuesta
+      description: "Explica qué dato debería cambiar y por qué, sin información de localización sensible."
+    validations:
+      required: true
+  - type: textarea
+    id: fuente
+    attributes:
+      label: Fuentes de respaldo
+      description: "Autor, año, página, DOI o enlace público; evita material protegido sin autorización."
+    validations:
+      required: true
