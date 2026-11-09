@@ -93,7 +93,8 @@ fetch("data/catalogo.json")
       "Quetzaltenango": [14.8347, -91.5181],
       "Jalapa": [14.634, -89.989],
       "Santa Rosa": [14.277, -90.299],
-      "Quiché": [15.031, -91.148]
+      "Quiché": [15.031, -91.148],
+      "Alta Verapaz": [15.469, -90.371]
     };
     const porDepartamento = new Map();
     registros.filter(r => ["referencia_historica", "identificacion_discutida", "sin_verificar"].includes(r.estadoVerificacion))
@@ -118,8 +119,9 @@ fetch("data/catalogo.json")
       const limite = 8;
       let visibles = limite;
       function pintarLocalidades() {
-        const termino = buscar.value.trim().toLocaleLowerCase("es");
-        const coinciden = registrosHistoricos.filter(r => [r.titulo, r.ubicacion?.departamento, r.ubicacion?.municipio].some(v => String(v || "").toLocaleLowerCase("es").includes(termino)));
+        const normalizar = valor => String(valor || "").normalize("NFD").replace(/\p{M}/gu, "").toLocaleLowerCase("es");
+        const termino = normalizar(buscar.value.trim());
+        const coinciden = registrosHistoricos.filter(r => [r.titulo, r.ubicacion?.departamento, r.ubicacion?.municipio].some(v => normalizar(v).includes(termino)));
         contador.textContent = `${coinciden.length} localidades coincidentes`;
         resultados.replaceChildren();
         coinciden.slice(0, visibles).forEach(r => {
@@ -197,6 +199,7 @@ fetch("data/catalogo.json")
       const enlace = document.createElement("a");
       enlace.href = "#catalogo";
       enlace.textContent = "Consultar catálogo";
+      enlace.addEventListener("click", () => document.dispatchEvent(new CustomEvent("geopaleo:abrir-ficha", { detail: { id: registro.id } })));
       popup.append(titulo, aviso, enlace);
       punto.bindPopup(popup);
     });

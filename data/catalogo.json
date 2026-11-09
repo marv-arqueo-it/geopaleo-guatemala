@@ -882,7 +882,7 @@
     "id": "GP-HIST-022",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: rescates de 1947–1950",
-    "descripcion": "La tesis describe trabajos de rescate de megafauna y un gliptodonte en 1950; posible solapamiento con la ficha general de Estanzuela.",
+    "descripcion": "La tesis describe trabajos de rescate de megafauna y un gliptodonte en 1950; posible solapamiento con la ficha general de Estanzuela. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -908,6 +908,14 @@
           "cita": "USAC, capítulo IV, segunda fase, pp. 54 (numeración impresa).",
           "paginas": "54",
           "nota": "Fuente secundaria. Revisar el documento original, las identificaciones y posibles duplicados antes de validar científicamente."
+        },
+        {
+          "titulo": "Glyptotherium cylindricum (Mammalia, Xenarthra, Glyptodontidae) from the Late Pleistocene of Guatemala",
+          "autores": "Francisco Cuadrelli y colaboradores",
+          "anio": 2023,
+          "cita": "Alcheringa 47(3):336–347. DOI 10.1080/03115518.2023.2242440.",
+          "paginas": "336–347",
+          "nota": "Referencia comparativa sobre material guatemalteco asignado a Glyptotherium cylindricum. NO demuestra que este registro histórico individual pertenezca a esa especie."
         }
       ]
     },
@@ -1290,7 +1298,7 @@
     "id": "GP-HIST-032",
     "tipoRegistro": "referencia_historica",
     "titulo": "Finca La Providencia",
-    "descripcion": "Depósito fosilífero con restos atribuidos a gliptodonte en trabajos del Programa de Arqueología del Motagua Medio.",
+    "descripcion": "Depósito fosilífero con restos atribuidos a gliptodonte en trabajos del Programa de Arqueología del Motagua Medio. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -1316,6 +1324,14 @@
           "cita": "USAC, capítulo IV, tercera fase, pp. 71 (numeración impresa).",
           "paginas": "71",
           "nota": "Fuente secundaria. Revisar el documento original, las identificaciones y posibles duplicados antes de validar científicamente."
+        },
+        {
+          "titulo": "Glyptotherium cylindricum (Mammalia, Xenarthra, Glyptodontidae) from the Late Pleistocene of Guatemala",
+          "autores": "Francisco Cuadrelli y colaboradores",
+          "anio": 2023,
+          "cita": "Alcheringa 47(3):336–347. DOI 10.1080/03115518.2023.2242440.",
+          "paginas": "336–347",
+          "nota": "Referencia comparativa sobre material guatemalteco asignado a Glyptotherium cylindricum. NO demuestra que este registro histórico individual pertenezca a esa especie."
         }
       ]
     },
@@ -1770,7 +1786,7 @@
     "id": "GP-HIST-044",
     "tipoRegistro": "referencia_historica",
     "titulo": "Tívoli, zona 9",
-    "descripcion": "Referencia a restos atribuidos a gliptodonte y proboscídeos, sin ubicación exacta del hallazgo.",
+    "descripcion": "Referencia a restos atribuidos a gliptodonte y proboscídeos, sin ubicación exacta del hallazgo. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
     "estadoVerificacion": "sin_verificar",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -1796,6 +1812,14 @@
           "cita": "USAC, capítulo IV, cuadro de datos incompletos, pp. 77–80 (numeración impresa).",
           "paginas": "77–80",
           "nota": "Fuente secundaria. Revisar el documento original, las identificaciones y posibles duplicados antes de validar científicamente."
+        },
+        {
+          "titulo": "Glyptotherium cylindricum (Mammalia, Xenarthra, Glyptodontidae) from the Late Pleistocene of Guatemala",
+          "autores": "Francisco Cuadrelli y colaboradores",
+          "anio": 2023,
+          "cita": "Alcheringa 47(3):336–347. DOI 10.1080/03115518.2023.2242440.",
+          "paginas": "336–347",
+          "nota": "Referencia comparativa sobre material guatemalteco asignado a Glyptotherium cylindricum. NO demuestra que este registro histórico individual pertenezca a esa especie."
         }
       ]
     },
@@ -2050,7 +2074,7 @@
     "id": "GP-HIST-051",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: rescate de gliptodonte",
-    "descripcion": "Rescate de caparazón y otros restos atribuidos a gliptodonte, sin localización exacta.",
+    "descripcion": "Rescate de caparazón y otros restos atribuidos a gliptodonte, sin localización exacta. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
     "estadoVerificacion": "sin_verificar",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -2076,6 +2100,14 @@
           "cita": "USAC, capítulo IV, cuadro de datos incompletos, pp. 78–81 (numeración impresa).",
           "paginas": "78–81",
           "nota": "Fuente secundaria. Revisar el documento original, las identificaciones y posibles duplicados antes de validar científicamente."
+        },
+        {
+          "titulo": "Glyptotherium cylindricum (Mammalia, Xenarthra, Glyptodontidae) from the Late Pleistocene of Guatemala",
+          "autores": "Francisco Cuadrelli y colaboradores",
+          "anio": 2023,
+          "cita": "Alcheringa 47(3):336–347. DOI 10.1080/03115518.2023.2242440.",
+          "paginas": "336–347",
+          "nota": "Referencia comparativa sobre material guatemalteco asignado a Glyptotherium cylindricum. NO demuestra que este registro histórico individual pertenezca a esa especie."
         }
       ]
     },
@@ -2490,7 +2522,7 @@
     "id": "GP-HIST-062",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: sitio Toya",
-    "descripcion": "Referencia a restos atribuidos a gliptodonte en sitio Toya.",
+    "descripcion": "Referencia a restos atribuidos a gliptodonte en sitio Toya. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
     "estadoVerificacion": "sin_verificar",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -2516,6 +2548,14 @@
           "cita": "USAC, capítulo IV, cuadro de datos incompletos, pp. 78–82 (numeración impresa).",
           "paginas": "78–82",
           "nota": "Fuente secundaria. Revisar el documento original, las identificaciones y posibles duplicados antes de validar científicamente."
+        },
+        {
+          "titulo": "Glyptotherium cylindricum (Mammalia, Xenarthra, Glyptodontidae) from the Late Pleistocene of Guatemala",
+          "autores": "Francisco Cuadrelli y colaboradores",
+          "anio": 2023,
+          "cita": "Alcheringa 47(3):336–347. DOI 10.1080/03115518.2023.2242440.",
+          "paginas": "336–347",
+          "nota": "Referencia comparativa sobre material guatemalteco asignado a Glyptotherium cylindricum. NO demuestra que este registro histórico individual pertenezca a esa especie."
         }
       ]
     },
@@ -2690,7 +2730,7 @@
     "id": "GP-HIST-067",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: sitio Víctor M. Casasola",
-    "descripcion": "La tesis registra fragmentos de caparazón y otros elementos atribuidos a Glyptotherium en el sitio n.º 8.",
+    "descripcion": "La tesis registra fragmentos de caparazón y otros elementos atribuidos a Glyptotherium en el sitio n.º 8. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "Gliptodontes (atribución histórica)",
@@ -2716,6 +2756,14 @@
           "cita": "USAC, capítulo IV, pp. 51 (numeración impresa); cuadro de segunda fase o descripción narrativa.",
           "paginas": "51",
           "nota": "Referencia secundaria pendiente de contrastar con documentos originales. No implica verificación taxonómica ni ubicación exacta."
+        },
+        {
+          "titulo": "Glyptotherium cylindricum (Mammalia, Xenarthra, Glyptodontidae) from the Late Pleistocene of Guatemala",
+          "autores": "Francisco Cuadrelli y colaboradores",
+          "anio": 2023,
+          "cita": "Alcheringa 47(3):336–347. DOI 10.1080/03115518.2023.2242440.",
+          "paginas": "336–347",
+          "nota": "Referencia comparativa sobre material guatemalteco asignado a Glyptotherium cylindricum. NO demuestra que este registro histórico individual pertenezca a esa especie."
         }
       ]
     },

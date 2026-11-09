@@ -354,3 +354,12 @@
 .atlas-listado-resultados{display:grid;gap:7px;max-height:390px;overflow-y:auto;padding-right:3px}
 .atlas-mas-localidades{padding:11px;border:1px solid #cfdce2;background:#f6f8f9;color:#28445b;border-radius:8px;cursor:pointer;font-weight:600}
 .atlas-mas-localidades:hover,.atlas-mas-localidades:focus-visible{background:#eaf1f4}
+
+/* Educación científica: tarjetas discretas, mapa continúa como sección principal */
+.geo-educacion{padding:64px max(5%,calc((100% - 1200px)/2));background:#f6f8f6}
+.geo-educacion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.geo-educacion-grid article{background:#fff;border:1px solid #dfe8e5;border-radius:14px;padding:22px;line-height:1.65;color:#30434c}
+.geo-educacion-grid h3{margin:0 0 8px;color:#24394b}
+.geo-educacion-grid p{margin:0}
+.geo-educacion-fuente{font-size:.86rem;color:#5d6f74;margin-top:18px;line-height:1.6}
+@media(max-width:700px){.geo-educacion{padding:40px 18px}.geo-educacion-grid{grid-template-columns:1fr}}
