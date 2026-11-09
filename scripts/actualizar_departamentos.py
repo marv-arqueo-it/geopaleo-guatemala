@@ -27,6 +27,17 @@ def main():
         raise ValueError("Hay polígonos sin nombre de departamento")
     DESTINO.parent.mkdir(parents=True, exist_ok=True)
     DESTINO.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    METADATOS = DESTINO.with_suffix(".fuente.json")
+    METADATOS.write_text(json.dumps({
+        "api": API,
+        "geojson_url": url,
+        "fuente": metadata.get("boundarySource"),
+        "licencia": metadata.get("boundaryLicense"),
+        "url_licencia": metadata.get("boundaryLicenseSource"),
+        "anio_referencia": metadata.get("boundaryYear"),
+        "nota": "Verificar licencia, atribución y geometrías antes de publicar."
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("Metadatos:", METADATOS)
     print("Guardado:", DESTINO, "| departamentos:", len(nombres))
     print("Fuente: geoBoundaries gbOpen, Guatemala ADM1")
     print("Licencia declarada por la API:", metadata.get("boundaryLicense", "Consultar metadatos"))
