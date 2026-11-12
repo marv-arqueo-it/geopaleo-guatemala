@@ -28,5 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: guatemala-departamentos-geojson-revisar-licencia
-          path: data/guatemala-departamentos.geojson
+          path: |
+            data/guatemala-departamentos.geojson
+            data/guatemala-departamentos.fuente.json
           retention-days: 14
