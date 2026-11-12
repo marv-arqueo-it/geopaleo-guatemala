@@ -238,9 +238,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   cerrar.addEventListener("click", () => modal.close());
 
-  modal.addEventListener("click", evento => {
-    if (evento.target === modal) modal.close();
-  });
+  // El cierre mediante clic en el propio <dialog> puede dispararse durante
+  // la apertura en navegadores automatizados; usar el botón y Escape.
+  // El cierre al pulsar fuera del diálogo se podrá reintroducir con
+  // comprobación explícita de coordenadas y pruebas de interacción.
 
   try {
     const respuesta = await fetch("data/catalogo.json");
