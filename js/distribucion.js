@@ -39,18 +39,29 @@
       const respuesta = await fetch(url, { cache: "no-cache" });
       if (!respuesta.ok) throw new Error("HTTP " + respuesta.status);
       const datos = await respuesta.json();
-      if (datos.type !== "FeatureCollection" || !Array.isArray(datos.features) || !datos.features.length) {
-        throw new Error("GeoJSON inválido o sin departamentos.");
+      if (datos.type !== "FeatureCollection" || !Array.isArray(datos.features) || datos.features.length !== 22 ||
+          datos.features.some(f => !f?.properties?.shapeName || !["Polygon", "MultiPolygon"].includes(f?.geometry?.type))) {
+        throw new Error("GeoJSON inválido: se esperan 22 departamentos identificados y geometrías Polygon/MultiPolygon.");
       }
       return datos;
     }
 
     let geojson;
     let procedencia = "geoBoundaries gbOpen ADM1";
-    let licencia = "ODbL 1.0";
+    let licencia = "licencia por verificar";
     try {
       geojson = await leerGeoJSON("data/guatemala-departamentos.geojson");
       procedencia += " (copia local)";
+      try {
+        const metaLocal = await fetch("data/guatemala-departamentos.fuente.json");
+        if (metaLocal.ok) {
+          const meta = await metaLocal.json();
+          if (typeof meta.licencia === "string" && meta.licencia.trim()) licencia = meta.licencia;
+          if (typeof meta.fuente === "string" && meta.fuente.trim()) procedencia = meta.fuente + " (copia local)";
+        }
+      } catch (errorMetadatos) {
+        console.info("Metadatos locales no disponibles:", errorMetadatos.message);
+      }
     } catch (localError) {
       console.info("Copia local no disponible; consultando geoBoundaries.", localError.message);
       try {
