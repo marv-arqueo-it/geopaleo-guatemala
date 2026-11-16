@@ -10,7 +10,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Descargar y validar límites ADM1
-        run: python scripts/actualizar_departamentos.py
+        run: |
+          set -o pipefail
+          python scripts/actualizar_departamentos.py 2>&1 | tee /tmp/descarga-limites.log
       - name: Validar GeoJSON y atributos
         run: |
           python - <<'PY'
