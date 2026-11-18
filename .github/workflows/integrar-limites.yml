@@ -1,0 +1,32 @@
+name: Integrar capa departamental verificada
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/importar_limites_verificados.py
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  integrar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Descargar archivo de origen y validar SHA-256
+        run: python scripts/importar_limites_verificados.py
+      - name: Registrar límites en main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/guatemala-departamentos.geojson data/guatemala-departamentos.fuente.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Integrar 22 departamentos desde fuente verificada"
+            git push
+          else
+            echo "Los límites ya están actualizados"
+          fi

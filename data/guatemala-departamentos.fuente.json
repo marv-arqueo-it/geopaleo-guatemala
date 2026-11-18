@@ -1,0 +1,10 @@
+{
+  "api": "https://www.geoboundaries.org/api/current/gbOpen/GTM/ADM1/",
+  "geojson_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GTM/ADM1/geoBoundaries-GTM-ADM1.geojson",
+  "fuente": "OpenStreetMap, Wambacher",
+  "licencia": "Open Data Commons Open Database License 1.0",
+  "url_licencia": null,
+  "anio_referencia": null,
+  "sha256_geojson": "9dc5bbb390c2e57d32159bd4c87fa84179ca52187433f95378642c48cee74b21",
+  "nota": "Metadatos declarados en archivo aportado; verificar atribución ODbL."
+}
