@@ -28,3 +28,16 @@ Los polígonos delimitan departamentos administrativos. No son sitios paleontol�
 5. Confirmar que los puntos demostrativos y el mapa base siguen funcionando.
 
 Si el archivo local existe pero no carga, revisar Network/Console y validar que sea GeoJSON.
+
+## Estado operativo y diagnóstico (noviembre de 2026)
+
+El PR #31 fue fusionado y `data/guatemala-departamentos.fuente.json` está en `main`, **pero el archivo GeoJSON todavía no está publicado en `main`**. No confundir metadatos con geometrías disponibles. El importador fijado en `scripts/importar_limites_verificados.py` valida SHA-256 y 22 nombres únicos; el workflow `Integrar capa departamental verificada` intenta registrar el archivo mediante un commit automático. Debe ejecutarse o comprobarse su ejecución y verificar que tenga permisos `contents: write`. Si la fuente versionada no responde o cambia el archivo, la operación fallará por diseño. No eliminar la comprobación de integridad.
+
+### Comprobación sin Chromium
+
+1. Abrir el repositorio en la rama `main` y confirmar la presencia real de `data/guatemala-departamentos.geojson`.
+2. Comprobar que `data/guatemala-departamentos.fuente.json` declara procedencia y licencia.
+3. En un clon local, ejecutar `python scripts/validar_capa_departamental.py`. Comprueba 22 geometrías, nombres únicos y huella SHA-256; si falta el archivo, indica que la importación está pendiente.
+4. Publicar y comprobar visualmente en GitHub Pages: selector de capas, leyenda, popups y filtros. No declarar este paso terminado antes de verlo funcionando.
+
+**Licencia:** la atribución disponible indica OpenStreetMap y Wambacher, ODbL 1.0. Confirmar los requisitos concretos de atribución y redistribución antes de utilizar la capa en otros productos.
