@@ -23,6 +23,10 @@ def main():
     if datos.get("type") != "FeatureCollection" or len(datos.get("features", [])) != 22:
         raise ValueError("Se esperaban los 22 departamentos de Guatemala; no se escribió ningún archivo")
     nombres = [f.get("properties", {}).get("shapeName") for f in datos["features"]]
+    if any(not n for n in nombres) or len(set(nombres)) != 22:
+        raise ValueError("Los 22 departamentos deben tener nombres únicos")
+    if any(f.get("geometry", {}).get("type") not in ("Polygon", "MultiPolygon") for f in datos["features"]):
+        raise ValueError("Geometría inesperada en límites ADM1")
     if any(not n for n in nombres):
         raise ValueError("Hay polígonos sin nombre de departamento")
     DESTINO.parent.mkdir(parents=True, exist_ok=True)
