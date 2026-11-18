@@ -29,7 +29,22 @@ const assert = require('node:assert/strict');
     await page.waitForTimeout(200);
     assert.match(await page.locator('#catalogo-contador').innerText(), new RegExp(`1 de ${expectedCount} registros`));
     await page.locator('#catalogo-registros .catalogo-tarjeta').first().click();
-    await page.waitForFunction(() => document.querySelector('#catalogo-modal')?.open === true, null, { timeout: 5000 });
+    try {
+      await page.waitForFunction(() => document.querySelector('#catalogo-modal')?.open === true, null, { timeout: 5000 });
+    } catch (error) {
+      const diagnostico = await page.evaluate(() => ({
+        modalExiste: Boolean(document.querySelector('#catalogo-modal')),
+        modalAbierto: document.querySelector('#catalogo-modal')?.open,
+        fichas: document.querySelectorAll('#catalogo-registros .catalogo-tarjeta').length,
+        titulo: document.querySelector('#catalogo-modal-titulo')?.textContent,
+        detalle: document.querySelector('#catalogo-detalle')?.textContent?.slice(0, 300),
+        catalogoAbierto: document.querySelector('#catalogo-desplegable')?.open
+      }));
+      console.error('DIAGNÓSTICO DE FICHA:', JSON.stringify(diagnostico));
+      console.error('ERRORES JS:', JSON.stringify(errors));
+      await page.screenshot({ path: '/tmp/geopaleo-modal-error.png', fullPage: true });
+      throw error;
+    }
     await page.locator('#catalogo-cerrar').click();
     await page.waitForFunction(() => document.querySelector('#catalogo-modal')?.open === false, null, { timeout: 5000 });
     await page.locator('#filtro-limpiar').click();
