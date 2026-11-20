@@ -1,36 +1,66 @@
 #!/usr/bin/env python3
-"""Importa límites departamentales de fuente fijada y verifica SHA-256 del archivo recibido."""
+"""Descarga ADM1 de geoBoundaries, valida geometrías y registra integridad/procedencia."""
 import hashlib
 import json
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-URL = "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GTM/ADM1/geoBoundaries-GTM-ADM1.geojson"
-SHA256 = "9dc5bbb390c2e57d32159bd4c87fa84179ca52187433f95378642c48cee74b21"
+API = "https://www.geoboundaries.org/api/current/gbOpen/GTM/ADM1/"
 DEST = Path("data/guatemala-departamentos.geojson")
 SOURCE = Path("data/guatemala-departamentos.fuente.json")
-with urlopen(Request(URL, headers={"User-Agent": "GeoPaleo-Guatemala/1.0"}), timeout=90) as response:
-    raw = response.read()
-digest = hashlib.sha256(raw).hexdigest()
-if digest != SHA256:
-    raise SystemExit(f"El GeoJSON no coincide con el archivo validado: {digest}")
-data = json.loads(raw)
-features = data.get("features", [])
-names = [f.get("properties", {}).get("shapeName") for f in features]
-if data.get("type") != "FeatureCollection" or len(features) != 22 or len(set(names)) != 22 or any(not n for n in names):
-    raise SystemExit("No se encontraron 22 departamentos únicos")
-if any(f.get("geometry", {}).get("type") not in ("Polygon", "MultiPolygon") for f in features):
-    raise SystemExit("Geometría departamental inesperada")
-DEST.parent.mkdir(parents=True, exist_ok=True)
-DEST.write_bytes(raw)
-SOURCE.write_text(json.dumps({
-    "api": "https://www.geoboundaries.org/api/current/gbOpen/GTM/ADM1/",
-    "geojson_url": URL,
-    "fuente": "OpenStreetMap, Wambacher",
-    "licencia": "Open Data Commons Open Database License 1.0",
-    "url_licencia": None,
-    "anio_referencia": None,
-    "sha256_geojson": SHA256,
-    "nota": "Procedencia declarada en el archivo facilitado para GeoPaleo; revisar requisitos de atribución ODbL antes de publicación."
-}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"OK: {len(features)} departamentos; SHA256 {digest}; {len(raw)} bytes")
+
+def leer(url):
+    with urlopen(Request(url, headers={"User-Agent": "GeoPaleo-Guatemala/1.0"}), timeout=90) as response:
+        return response.read()
+
+def validar(datos):
+    if datos.get("type") != "FeatureCollection":
+        raise ValueError("No es una colección GeoJSON")
+    features = datos.get("features", [])
+    if len(features) != 22:
+        raise ValueError(f"Se esperaban 22 departamentos, recibidos {len(features)}")
+    nombres = []
+    for f in features:
+        nombre = (f.get("properties") or {}).get("shapeName")
+        geom = f.get("geometry") or {}
+        if not isinstance(nombre, str) or not nombre.strip():
+            raise ValueError("Departamento sin nombre")
+        if geom.get("type") not in ("Polygon", "MultiPolygon") or not geom.get("coordinates"):
+            raise ValueError("Departamento sin polígono")
+        nombres.append(nombre.strip().casefold())
+    if len(set(nombres)) != 22:
+        raise ValueError("Nombres departamentales duplicados")
+
+def main():
+    metadata = json.loads(leer(API))
+    if metadata.get("boundaryISO") != "GTM" or metadata.get("boundaryType") != "ADM1":
+        raise SystemExit("La API devolvió una frontera inesperada")
+    url = metadata.get("gjDownloadURL")
+    if not isinstance(url, str) or not url.startswith("https://"):
+        raise SystemExit("URL GeoJSON no válida")
+    raw = leer(url)
+    if raw.startswith(b"version https://git-lfs.github.com/spec/v1"):
+        raise SystemExit("La descarga devolvió un puntero Git LFS en vez de geometrías")
+    datos = json.loads(raw)
+    validar(datos)
+    digest = hashlib.sha256(raw).hexdigest()
+    licencia = metadata.get("boundaryLicense")
+    if not licencia:
+        raise SystemExit("La API no indicó licencia; revisión humana requerida")
+    fuente = {
+        "api": API,
+        "geojson_url": url,
+        "fuente": metadata.get("boundarySource"),
+        "licencia": licencia,
+        "url_licencia": metadata.get("licenseSource"),
+        "anio_referencia": metadata.get("boundaryYearRepresented"),
+        "sha256_geojson": digest,
+        "nota": "Límites administrativos ADM1. No representan coordenadas de fósiles. Respetar atribución y condiciones ODbL."
+    }
+    DEST.parent.mkdir(parents=True, exist_ok=True)
+    DEST.write_bytes(raw)
+    SOURCE.write_text(json.dumps(fuente, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"OK: 22 departamentos; {len(raw)} bytes; SHA-256 {digest}; fuente {fuente['fuente']}")
+
+if __name__ == "__main__":
+    main()
