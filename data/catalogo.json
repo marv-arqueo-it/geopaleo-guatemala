@@ -842,7 +842,7 @@
     "id": "GP-HIST-021",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chinautla: noticia de hallazgo de 1947",
-    "descripcion": "Noticia histórica de restos atribuidos a mastodonte; puede referirse a un episodio distinto del de 1875–1876.",
+    "descripcion": "La monografía (Colón Morales 2015, capítulo IV, p. 45 impresa) remite a Ibarra (1980:12,14) y a una noticia de El Imparcial sobre restos atribuidos a mastodonte en Chinautla. Ibarra no precisa día, mes ni año de la publicación periodística; 1947 es la fecha de clasificación de la tesis, no una fecha documental del hallazgo demostrada aquí. No se vincula automáticamente con la noticia de 1875–1876 ni con el holotipo revisado por Lucas et al. (2022).",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -882,7 +882,7 @@
     "id": "GP-HIST-022",
     "tipoRegistro": "referencia_historica",
     "titulo": "Estanzuela: rescates de 1947–1950",
-    "descripcion": "La tesis describe trabajos de rescate de megafauna y un gliptodonte en 1950; posible solapamiento con la ficha general de Estanzuela. Nota de revisión: Cuadrelli y colaboradores (2023) estudiaron material guatemalteco atribuido a Glyptotherium cylindricum, pero esta ficha histórica no se reasigna a esa especie sin verificar procedencia, espécimen y colección.",
+    "descripcion": "Colón Morales (2015) reúne rescates históricos de Estanzuela de 1947–1950. Cuadrelli et al. (2023, Alcheringa 47(3):336–347) documentan material de colección ME 137 (caparazón dorsal), ME 151–ME 163 (elementos asociados) y una hemimandíbula izquierda sin número de registro de Estanzuela. **No se ha demostrado que esos ejemplares correspondan a los rescates de 1947–1950 de esta ficha**; se conservan como comparación bibliográfica, no como equivalencia de colección.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
@@ -931,7 +931,7 @@
     "id": "GP-HIST-023",
     "tipoRegistro": "referencia_historica",
     "titulo": "Chinautla: mandíbula referida en 1962",
-    "descripcion": "La tesis cita una mandíbula atribuida tentativamente a Cuvieronius o Haplomastodon, sin identificación específica confirmada.",
+    "descripcion": "Colón Morales (2015, capítulo IV, p. 47 impresa) recoge de Ibarra (1980:37) una mandíbula de proboscídeo de la colección de John Wilenhsen, encontrada en Chinautla. Gazin consideró tentativamente Cuvieronius hyodon o Haplomastodon waringi, pero sin material comparativo no confirmó la especie. La fuente secundaria indica que Ibarra no precisa fecha ni lugar exacto; «1962» es la agrupación cronológica de la tesis y no prueba por sí sola la fecha del hallazgo.",
     "estadoVerificacion": "referencia_historica",
     "clasificacion": {
       "grupo": "No confirmado para este registro",
